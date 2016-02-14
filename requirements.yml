@@ -31,7 +31,7 @@
   # configured to try to autoupdate during install of affiliated
   # packages. Set to true if the package uses astropy-helpers and
   # auto-update and the --offline flag will be passed to setup.py.
-  astropy_helpers: true   # Defaults to false if omitted.
+  setup_options: '--offline'   # Defaults to false if omitted.
 
   # If the package contains compiled extensions that link to numpy this
   # must be set to true to ensure the package is built properly.
@@ -48,86 +48,86 @@
 # sncosmo has a recipe template
 - name: sncosmo
   version: 1.2.0
-  astropy_helpers: true
+  setup_options: '--offline'
   numpy_compiled_extensions: false
 
 # pydl has a recipe template
 - name: pydl
   version: 0.4.1
-  astropy_helpers: true
+  setup_options: '--offline'
   numpy_compiled_extensions: false
 
 # montage-wrapper has a recipe template
 - name: montage-wrapper
   version: 0.9.8
-  astropy_helpers: true
+  setup_options: '--offline'
   numpy_compiled_extensions: false
 
 - name: ccdproc
   version: 0.3.3
-  astropy_helpers: true
+  setup_options: '--offline'
   numpy_compiled_extensions: false
 
 - name: wcsaxes
   version: '0.6'
-  astropy_helpers: true
+  setup_options: '--offline'
   numpy_compiled_extensions: false
 
 - name: gammapy
   version: '0.3'
-  astropy_helpers: true
+  setup_options: '--offline'
   numpy_compiled_extensions: false
 
 # Fails because its astropy helpers is ancient/tries to import astropy???
 # - name: pyvo
 #   version: 0.0beta2
-#   astropy_helpers: true
+#   setup_options: '--offline'
 #   numpy_compiled_extensions: false
 
 - name: photutils
   version: '0.2.1'
-  astropy_helpers: true
+  setup_options: '--offline'
   numpy_compiled_extensions: false
 
 # Still has no source on pypi....
 # - name: spherical-geometry
 #   version: 1.0.4
-#   astropy_helpers: true
+#   setup_options: '--offline'
 #   numpy_compiled_extensions: false
 
 # APLpy currently has a recipe template
 - name: APLpy
   version: '1.0'
-  astropy_helpers: true
+  setup_options: '--offline'
 
 - name: specutils
   version: '0.1'
-  astropy_helpers: true
+  setup_options: '--offline'
   numpy_compiled_extensions: false
 
 # imexam has a recipe template
 - name: imexam
   version: 0.5.2
-  astropy_helpers: true
+  setup_options: '--offline'
   numpy_compiled_extensions: false
   python: '>2.6,<3'
 
 # gwcs has a recipe template
 - name: gwcs
   version: 0.5
-  astropy_helpers: true
+  setup_options: '--offline'
   numpy_compiled_extensions: false
 
 # asdf has a recipe template
 - name: asdf
   version: 1.0.1
-  astropy_helpers: true
+  setup_options: '--offline'
   numpy_compiled_extensions: false
 
 # pyregion has a recipe template
 - name: pyregion
   version: 1.1.4
-  astropy_helpers: true
+  setup_options: '--offline'
   numpy_compiled_extensions: true
 
 # astroML has a recipe template
@@ -138,14 +138,14 @@
 # ginga has a recipe template
 - name: ginga
   version: 2.5.20151230025145
-  astropy_helpers: true
+  setup_options: '--offline'
   numpy_compiled_extensions: false
   python: '>2.6'
 
 # naima has a recipe template
 - name: naima
   version: '0.7.1'
-  astropy_helpers: true
+  setup_options: '--offline'
   numpy_compiled_extensions: false
 
 - name: pyephem
@@ -154,12 +154,12 @@
 # reproject has a recipe template
 - name: reproject
   version: '0.2'
-  astropy_helpers: true
+  setup_options: '--offline'
   numpy_compiled_extensions: true
 
 - name: astroplan
   version: '0.1'
-  astropy_helpers: true
+  setup_options: '--offline'
   numpy_compiled_extensions: false
 
 # python-cpl has a recipe template for now
@@ -170,9 +170,9 @@
 # astroscrappy has a recipe template
 - name: astroscrappy
   version: '1.0.3'
-  astropy_helpers: true
+  setup_options: '--offline'
   numpy_compiled_extensions: true
 
 - name: omnifit
   version: '0.2.1'
-  astropy_helpers: true
+  setup_options: '--offline'
