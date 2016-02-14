@@ -43,7 +43,7 @@ install:
     # Install custom version of conda-build for now (need to be able to pass
     # options to setup.py)
     - conda remove conda-build
-    - conda install astropy-ci-extras conda-build
+    - conda install -c astropy-ci-extras conda-build=1.18.1
 
     # Finally, install extruder
     - conda install -c astropy extruder
