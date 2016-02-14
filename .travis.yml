@@ -1,5 +1,7 @@
 # The language in this case has no bearing - we are going to be making use of "conda" for a
 # python distribution for the scientific python stack.
+language: c
+
 os:
   - linux
   - osx
@@ -11,7 +13,7 @@ env:
         - CONDA_INSTALL_LOCN="${HOME}/miniconda"
 
         # Defines BINSTAR_TOKEN for your binstar channel
-        secure: "ALFU83aFRoTrIMVzOTAiasZi923yZHHmS/6/D+kVPwB3O8CF6t4P/YumefTHm18VgbKmxeDNr7Ht+Lrq1IR7fq9qwHlfXsr6Ke1tm9j3hrhanRo4akSUec8QspVJ3gjDcUcJ6mqAHFdoE2fSn/fHDMAzboNxtNDhWlYhFU3tZU7ryZtlWzMQFHqI9xkn8oB750qxBYSth1O7I7JkkMA1Xo8sGyw3wBCgnmsFsDkzE9agsgHK1OhLBfMExanaHaT+GnQ8rSZOTGXasjoBlHTMY7hWWjuditaD8+fHI+vgDeyKPS7cd4zipeHVocbTZHEaXOc5+nDT+3qFp4+ZStvenVZIpokoAxfndkNPwP8vDN7yfrpD8fcXYwRVr7KnqWRZcCtWQB4dT0c478pIj4G/WoKXCiot/CH5iPLmDB5U5otkprwqzUTAbvvPQujIzqxPtMZe9XmWSkVvRqPqUuli4chOv6Rgu20mF7I34NjPgs5S4ZvZRFIygZVqFIMC8JfVpDkIPntWa4VuQspPHk4dAu52K4/uFNnNQKY7pxwKhQkJ8d6RhbpA4lRNXa0qP/jofJmB3IVpbsL6JCpYOGhDPOOH9/emj60js5WVrnTlrLnveZUNwKgkuCC/IE4F2M3qX1BO8vf7vHI7dOE/Bci+jz713pD/wUegpLMS1w9bsko="
+        - secure: "ALFU83aFRoTrIMVzOTAiasZi923yZHHmS/6/D+kVPwB3O8CF6t4P/YumefTHm18VgbKmxeDNr7Ht+Lrq1IR7fq9qwHlfXsr6Ke1tm9j3hrhanRo4akSUec8QspVJ3gjDcUcJ6mqAHFdoE2fSn/fHDMAzboNxtNDhWlYhFU3tZU7ryZtlWzMQFHqI9xkn8oB750qxBYSth1O7I7JkkMA1Xo8sGyw3wBCgnmsFsDkzE9agsgHK1OhLBfMExanaHaT+GnQ8rSZOTGXasjoBlHTMY7hWWjuditaD8+fHI+vgDeyKPS7cd4zipeHVocbTZHEaXOc5+nDT+3qFp4+ZStvenVZIpokoAxfndkNPwP8vDN7yfrpD8fcXYwRVr7KnqWRZcCtWQB4dT0c478pIj4G/WoKXCiot/CH5iPLmDB5U5otkprwqzUTAbvvPQujIzqxPtMZe9XmWSkVvRqPqUuli4chOv6Rgu20mF7I34NjPgs5S4ZvZRFIygZVqFIMC8JfVpDkIPntWa4VuQspPHk4dAu52K4/uFNnNQKY7pxwKhQkJ8d6RhbpA4lRNXa0qP/jofJmB3IVpbsL6JCpYOGhDPOOH9/emj60js5WVrnTlrLnveZUNwKgkuCC/IE4F2M3qX1BO8vf7vHI7dOE/Bci+jz713pD/wUegpLMS1w9bsko="
 
         # The python build restriction MUST be set at the moment, though it
         # can have any value. The setting below avoids known-bad builds on
@@ -44,7 +46,7 @@ install:
     - conda install astropy-ci-extras conda-build
 
     # Finally, install extruder
-    - cmd: conda install -c astropy extruder
+    - conda install -c astropy extruder
 
 script:
     # Get ready to build.
