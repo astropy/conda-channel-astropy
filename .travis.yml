@@ -36,6 +36,7 @@ install:
     - conda install --quiet --yes astropy anaconda-client jinja2 cython pycrypto
 
     - conda config --add channels astropy
+    - conda config --add channels conda-forge
 
     # Install obvious-ci.
     - conda install -c conda-forge obvious-ci
