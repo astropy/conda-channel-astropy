@@ -1,6 +1,10 @@
 # For users
 
-To install the conda packages maintained in this repository, add the conda channel for this repository to your list of default channels:
+To install the conda packages maintained in this repository do
+`conda install -c astropy package_name`
+
+If you use this channel frequently it may be convenient to add the conda
+channel for this repository to your list of default channels:
 
 ```
 conda config --add channels astropy
