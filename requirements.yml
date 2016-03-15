@@ -64,7 +64,7 @@
   numpy_compiled_extensions: false
 
 - name: ccdproc
-  version: 0.3.3
+  version: 1.0.1
   setup_options: '--offline'
   numpy_compiled_extensions: false
 
