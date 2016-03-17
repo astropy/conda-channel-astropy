@@ -176,3 +176,8 @@
 - name: omnifit
   version: '0.2.1'
   setup_options: '--offline'
+
+- name: maltpynt
+  version: '1.0.4'
+  setup_options: '--offline'
+  numpy_compiled_extensions: false
