@@ -176,3 +176,8 @@
 - name: omnifit
   version: '0.2.1'
   setup_options: '--offline'
+
+# maltpynt doe snot seem to actually update astropy_helpers during setup.
+- name: maltpynt
+  version: '1.0.4'
+  numpy_compiled_extensions: false
