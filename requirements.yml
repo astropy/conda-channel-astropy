@@ -135,10 +135,8 @@
   version: '0.3'
   python: '>=2.6|>=3.3'
 
-# ginga has a recipe template
 - name: ginga
-  version: 2.5.20151230025145
-  setup_options: '--offline'
+  version: 2.5.20160303055013
   numpy_compiled_extensions: false
   python: '>2.6'
 
