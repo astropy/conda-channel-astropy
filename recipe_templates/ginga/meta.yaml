@@ -10,7 +10,7 @@ source:
   md5: {{md5}}
   patches:
    # List any patch files here
-    - setup.diff # [win and py3k]
+   # - setup.diff # [win and py3k]
 
 # build:
   # noarch_python: True
