@@ -55,7 +55,7 @@ install:
     - cmd: conda install --quiet astropy anaconda-client jinja2 cython
     # These installs are needed on windows but not other platforms.
     - cmd: conda install patch psutil
-    - cmd: conda install -c conda-forge obvious-ci
+    - cmd: conda install -c conda-forge conda-build-all
 
     # Finally, install extruder
     - cmd: conda install extruder
@@ -71,4 +71,4 @@ test_script:
     # Get ready to build.
     - "%CMD_IN_ENV% extrude_recipes requirements.yml"
     # Packages are uploaded as they are built.
-    - if exist recipes %CMD_IN_ENV% obvci_conda_build_dir --build-condition="python %PYTHON_BUILD_RESTRICTIONS%" recipes %DESTINATION_CONDA_CHANNEL%
+    - if exist recipes %CMD_IN_ENV% conda build-all recipes --matrix-conditions="python %PYTHON_BUILD_RESTRICTIONS%"  --inspect-channels="astropy" --upload-channels %DESTINATION_CONDA_CHANNEL%
