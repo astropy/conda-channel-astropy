@@ -179,3 +179,7 @@
 - name: maltpynt
   version: '1.0.4'
   numpy_compiled_extensions: false
+  
+- name: pyspeckit
+  version: '0.18'
+  numpy_compiled_extensions: false
