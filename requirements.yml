@@ -182,4 +182,3 @@
   
 - name: spectral-cube
   version: '0.3.1'
-  setup_options: '--offline'
