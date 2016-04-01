@@ -181,5 +181,5 @@
   numpy_compiled_extensions: false
   
 - name: pyspeckit
-  version: '0.18'
+  version: '0.1.18.1'
   numpy_compiled_extensions: false
