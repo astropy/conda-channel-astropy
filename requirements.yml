@@ -179,3 +179,7 @@
 - name: maltpynt
   version: '1.0.4'
   numpy_compiled_extensions: false
+  
+- name: spectral-cube
+  version: '0.3.1'
+  setup_options: '--offline'
