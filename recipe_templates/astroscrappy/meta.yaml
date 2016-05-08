@@ -16,10 +16,6 @@ source:
    # List any patch files here
     - windows_patch.diff [win]
 
-build:
-  # noarch_python: True
-  # preserve_egg_dir: True
-
 requirements:
   build:
     - python
