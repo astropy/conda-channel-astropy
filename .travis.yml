@@ -41,7 +41,6 @@ install:
     # Install obvious-ci.
     - conda install -c conda-forge obvious-ci
 
-
     # Finally, install extruder
     - conda install -c astropy extruder
 
