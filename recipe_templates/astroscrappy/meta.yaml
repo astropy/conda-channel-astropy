@@ -19,19 +19,6 @@ source:
 build:
   # noarch_python: True
   # preserve_egg_dir: True
-  entry_points:
-    # Put any entry points (scripts to be generated automatically) here. The
-    # syntax is module:function.  For example
-    #
-    # - astroscrappy = astroscrappy:main
-    #
-    # Would create an entry point called astroscrappy that calls astroscrappy.main()
-
-    # - astropy-package-template-example = packagename.example_mod:main
-
-  # If this is a new build for the same version, increment the build
-  # number. If you do not include this key, it defaults to 0.
-  # number: 1
 
 requirements:
   build:
