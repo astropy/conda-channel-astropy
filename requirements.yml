@@ -51,9 +51,8 @@
   setup_options: '--offline'
   numpy_compiled_extensions: false
 
-# pydl has a recipe template
 - name: pydl
-  version: 0.4.1
+  version: 0.5.0
   setup_options: '--offline'
   numpy_compiled_extensions: false
 
