@@ -163,7 +163,6 @@
 # python-cpl has a recipe template for now
 - name: python-cpl
   version: '0.7'
-  astropy_helpers: false
 
 # astroscrappy has a recipe template
 - name: astroscrappy
@@ -175,7 +174,7 @@
   version: '0.2.1'
   setup_options: '--offline'
 
-# maltpynt doe snot seem to actually update astropy_helpers during setup.
+# maltpynt does not seem to actually update astropy_helpers during setup.
 - name: maltpynt
   version: '1.0.4'
   numpy_compiled_extensions: false
@@ -183,3 +182,8 @@
 - name: spectral-cube
   version: '0.3.1'
   setup_options: '--offline'
+
+- name: halotools
+  version: '0.1'
+  setup_options: '--offline'
+  python: '2.7*'
