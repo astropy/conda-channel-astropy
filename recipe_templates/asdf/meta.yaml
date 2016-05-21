@@ -1,6 +1,5 @@
 # Recipe needed to:
 #
-# + Include numpy as a dependency
 # + Skip a couple of the import tests
 package:
   name: asdf
@@ -38,6 +37,7 @@ requirements:
     - pyyaml >=3.10
     - jsonschema >=2.3.0
     - six >=1.9.0
+    - numpy
     - pytest >=2.7.2
 
   run:
