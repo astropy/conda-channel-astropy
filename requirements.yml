@@ -153,7 +153,6 @@
 - name: reproject
   version: '0.2'
   setup_options: '--offline'
-  astropy_helpers: true
   numpy_compiled_extensions: true
 
 - name: astroplan
@@ -164,7 +163,6 @@
 # python-cpl has a recipe template for now
 - name: python-cpl
   version: '0.7'
-  astropy_helpers: false
 
 # astroscrappy has a recipe template
 - name: astroscrappy
