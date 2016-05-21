@@ -183,3 +183,4 @@
 - name: pyspeckit
   version: '0.1.18.1'
   numpy_compiled_extensions: false
+  setup_options: '--offline'
