@@ -161,7 +161,7 @@
 
 # python-cpl has a recipe template for now
 - name: python-cpl
-  version: '0.7'
+  version: '0.7.2'
 
 # astroscrappy has a recipe template
 - name: astroscrappy
