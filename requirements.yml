@@ -25,7 +25,7 @@
 - name: astroquery
   # Version should match the version on PyPI. Versions that could be
   # interpereted as numbers (e.g. 0.1) should be enclosed in quotes.
-  version: 0.3.1
+  version: 0.3.2
 
   # conda builds disable downloading, but astropy-helpers is typically
   # configured to try to autoupdate during install of affiliated
@@ -177,7 +177,7 @@
 - name: maltpynt
   version: '1.0.4'
   numpy_compiled_extensions: false
-  
+
 - name: spectral-cube
   version: '0.3.1'
   setup_options: '--offline'
