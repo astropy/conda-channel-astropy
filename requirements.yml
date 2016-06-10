@@ -16,7 +16,7 @@
   version: 2.1.0
 
 - name: corner
-  version: 1.0.1
+  version: 2.0.0
 
 # astropy-helpers has a recipe template
 - name: astropy-helpers
