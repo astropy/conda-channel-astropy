@@ -75,11 +75,10 @@
   setup_options: '--offline'
   numpy_compiled_extensions: false
 
-# Still has no source on pypi....
-# - name: spherical-geometry
-#   version: 1.0.4
-#   setup_options: '--offline'
-#   numpy_compiled_extensions: false
+- name: spherical-geometry
+  version: 1.0.6
+  setup_options: '--offline'
+  numpy_compiled_extensions: false
 
 # APLpy currently has a recipe template
 - name: APLpy
