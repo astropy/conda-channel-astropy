@@ -186,3 +186,5 @@
   version: '0.2'
   setup_options: '--offline'
   python: '>=2.7'
+  excluded_platforms:
+      - 'win-64'
