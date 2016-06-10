@@ -58,7 +58,7 @@
   numpy_compiled_extensions: false
 
 - name: gammapy
-  version: '0.3'
+  version: '0.4'
   setup_options: '--offline'
   numpy_compiled_extensions: false
 
