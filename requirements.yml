@@ -175,7 +175,7 @@
 
 # maltpynt does not seem to actually update astropy_helpers during setup.
 - name: maltpynt
-  version: '1.0.4'
+  version: '1.0.7'
   numpy_compiled_extensions: false
 
 - name: spectral-cube
