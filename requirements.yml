@@ -184,7 +184,7 @@
   setup_options: '--offline'
 
 - name: halotools
-  version: '0.2'
+  version: '0.3'
   setup_options: '--offline'
   python: '>=2.7'
   excluded_platforms:
