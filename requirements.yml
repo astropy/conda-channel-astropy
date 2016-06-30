@@ -52,7 +52,7 @@
   numpy_compiled_extensions: false
 
 - name: pydl
-  version: 0.5.0
+  version: 0.5.1
   setup_options: '--offline'
   numpy_compiled_extensions: false
 
