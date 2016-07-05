@@ -69,7 +69,7 @@
   numpy_compiled_extensions: false
 
 - name: wcsaxes
-  version: '0.8'
+  version: '0.9'
   setup_options: '--offline'
   numpy_compiled_extensions: false
 
