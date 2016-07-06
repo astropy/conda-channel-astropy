@@ -5,7 +5,7 @@ package:
 
 source:
   fn: omnifit-{{version}}.tar.gz
-  url: https://pypi.python.org/packages/source/o/omnifit/omnifit-{{version}}.tar.gz
+  url: https://pypi.io/packages/source/o/omnifit/omnifit-{{version}}.tar.gz
   md5: {{md5}}
 #  patches:
    # List any patch files here

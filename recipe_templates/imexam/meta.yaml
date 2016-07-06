@@ -7,7 +7,7 @@ package:
 
 source:
   fn: imexam-{{version}}.tar.gz
-  url: https://pypi.python.org/packages/source/i/imexam/imexam-{{version}}.tar.gz
+  url: https://pypi.io/packages/source/i/imexam/imexam-{{version}}.tar.gz
   md5: {{md5}}
   patches:
     - setup-hack.diff

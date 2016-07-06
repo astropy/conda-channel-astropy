@@ -9,7 +9,7 @@ package:
 
 source:
   fn: montage-wrapper-{{version}}.tar.gz
-  url: https://pypi.python.org/packages/source/m/montage-wrapper/montage-wrapper-{{version}}.tar.gz
+  url: https://pypi.io/packages/source/m/montage-wrapper/montage-wrapper-{{version}}.tar.gz
   md5: {{md5}}
 #  patches:
    # List any patch files here
