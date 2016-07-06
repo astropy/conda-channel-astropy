@@ -151,7 +151,7 @@
 
 # reproject has a recipe template
 - name: reproject
-  version: '0.2'
+  version: '0.3'
   setup_options: '--offline'
   numpy_compiled_extensions: true
 
