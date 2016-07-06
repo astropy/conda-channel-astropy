@@ -5,7 +5,7 @@ package:
 
 source:
   fn: naima-{{version}}.tar.gz
-  url: https://pypi.python.org/packages/source/n/naima/naima-{{version}}.tar.gz
+  url: https://pypi.io/packages/source/n/naima/naima-{{version}}.tar.gz
   md5: {{md5}}
 #  patches:
    # List any patch files here

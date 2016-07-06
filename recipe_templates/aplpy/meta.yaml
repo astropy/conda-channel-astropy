@@ -6,7 +6,7 @@ package:
 
 source:
   fn: APLpy-{{version}}.tar.gz
-  url: https://pypi.python.org/packages/source/A/APLpy/APLpy-{{version}}.tar.gz
+  url: https://pypi.io/packages/source/A/APLpy/APLpy-{{version}}.tar.gz
   md5: {{md5}}
 #  patches:
    # List any patch files here

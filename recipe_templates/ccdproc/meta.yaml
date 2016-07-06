@@ -6,7 +6,7 @@ package:
 
 source:
   fn: ccdproc-{{version}}.tar.gz
-  url: https://pypi.python.org/packages/source/c/ccdproc/ccdproc-{{version}}.tar.gz
+  url: https://pypi.io/packages/source/c/ccdproc/ccdproc-{{version}}.tar.gz
   md5: {{md5}}
 #  patches:
    # List any patch files here
