@@ -20,6 +20,9 @@ env:
         # python 2.6 and 3.3 for some packages.
         - PYTHON_BUILD_RESTRICTIONS="2.7*|>=3.4"
 
+        # The value below needs to be set but will be ignored.
+        - CONDA_NPY="1.11"
+
 # Matrix is fully specified (for now) by os versions
 
 install:
@@ -47,6 +50,7 @@ install:
     # Install custom version of conda-build for now (need to be able to pass
     # options to setup.py)
     - conda remove --force conda-build
+    - conda install psutil
     - conda install -c astropy-ci-extras --override-channels conda-build
 
 script:

@@ -17,6 +17,9 @@ environment:
     # Paste the security token for your destination conda channel here.
     secure: In551w7v371boSMxAcNcHccXMbcLyVImifhayYopb02ZqkUGYV8QyDu1tjVbKaJz
 
+  # The value below will be ignored but needs to be set for conda-build-all
+  CONDA_NPY: "1.11"
+
   matrix:
     # Unfortunately, compiler/SDK configuration for 64 bit builds depends on
     # python version. Right now conda build does not configure the SDK, and
