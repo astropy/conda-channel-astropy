@@ -1,0 +1,78 @@
+package:
+  name: specutils
+  version: "{{version}}"
+
+source:
+  fn: specutils-{{version}}.tar.gz
+  url: https://pypi.io/packages/source/s/specutils/specutils-0.2.1.tar.gz
+  md5: {{ md5 }}
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # noarch_python: True
+  # preserve_egg_dir: True
+  # entry_points:
+    # Put any entry points (scripts to be generated automatically) here. The
+    # syntax is module:function.  For example
+    #
+    # - specutils = specutils:main
+    #
+    # Would create an entry point called specutils that calls specutils.main()
+
+
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - python
+    - setuptools
+    - cython
+    - numpy
+    - astropy
+
+  run:
+    - python
+    - astropy
+    - numpy
+
+test:
+  # Python imports
+  imports:
+    - specutils
+    - specutils.core
+    - specutils.extern
+    - specutils.io
+    - specutils.io.iraf
+    - specutils.io.iraf.tests
+    - specutils.io.tests
+    - specutils.models
+    - specutils.models.tests
+    - specutils.tests
+    - specutils.utils
+    - specutils.wcs
+    - specutils.wcs.tests
+
+  # commands:
+    # You can put test commands to be run here.  Use this to test that the
+    # entry points work.
+
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: http://specutils.astropy.org/
+  license: BSD
+  summary: 'Astropy affiliated package for astronomical spectral operations.'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml
