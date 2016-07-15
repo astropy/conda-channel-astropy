@@ -8,8 +8,8 @@ package:
   version: "{{version}}"
 
 source:
-  fn: keyring-{{version}}.zip
-  url: https://pypi.io/packages/source/k/keyring/keyring-{{version}}.zip
+  fn: keyring-{{version}}.tar.gz
+  url: https://pypi.io/packages/source/k/keyring/keyring-{{version}}.tar.gz
   md5: {{md5}}
 #  patches:
    # List any patch files here
