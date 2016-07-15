@@ -187,7 +187,7 @@
 
 # keyring has a recipe template
 - name: keyring
-  version: '5.3'
+  version: '9.3.1'
 
 # lmfit is required for omnifit
 - name: lmfit
