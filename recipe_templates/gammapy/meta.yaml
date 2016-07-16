@@ -39,7 +39,6 @@ build:
     - gammapy-image-lookup = gammapy.scripts.image_lookup:image_lookup_main
     - gammapy-image-model = gammapy.scripts.image_model:image_model_main
     - gammapy-image-model-sherpa = gammapy.scripts.image_model_sherpa:image_model_sherpa_main
-    - gammapy-image-pipe = gammapy.scripts.image_pipe:image_pipe_main
     - gammapy-image-pfmap = gammapy.scripts.image_pfmap:image_pfmap_main
     - gammapy-image-ts = gammapy.scripts.image_ts:image_ts_main
     - gammapy-cube-bin = gammapy.scripts.cube_bin:cube_bin_main
@@ -143,7 +142,6 @@ test:
     - gammapy-image-lookup --help
     - gammapy-image-model --help
     - gammapy-image-model-sherpa --help
-    - gammapy-image-pipe --help
     - gammapy-image-pfmap --help
     - gammapy-image-ts --help
     - gammapy-cube-bin --help
