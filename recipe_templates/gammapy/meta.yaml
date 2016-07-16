@@ -1,0 +1,168 @@
+package:
+  name: gammapy
+  version: "{{ version }}"
+
+source:
+  fn: gammapy-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/g/gammapy/gammapy-{{version}}.tar.gz
+  md5: {{ md5 }}
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+build:
+  # noarch_python: True
+  preserve_egg_dir: True
+  entry_points:
+    # Put any entry points (scripts to be generated automatically) here. The
+    # syntax is module:function.  For example
+    #
+    # - gammapy = gammapy:main
+    #
+    # Would create an entry point called gammapy that calls gammapy.main()
+
+    - gammapy-info = gammapy.scripts.info:info_main
+    - gammapy-test = gammapy.scripts.check:check_main
+    - gammapy-data-browse = gammapy.scripts.data_browser:main
+    - gammapy-data-manage = gammapy.scripts.data_manage:data_manage
+    - gammapy-data-select = gammapy.scripts.data_select:data_select_main
+    - gammapy-data-show = gammapy.scripts.data_show:data_show_main
+    - gammapy-spectrum = gammapy.scripts.spectrum:cli
+    - gammapy-spectrum-hspec = gammapy.hspec.run_fit:main
+    - gammapy-spectrum-pfsim = gammapy.scripts.spectrum_pfsim:spectrum_pfsim_main
+    - gammapy-spectrum-regions = gammapy.scripts.spectrum_regions:spectrum_regions_main
+    - gammapy-image-bin = gammapy.scripts.image_bin:image_bin_main
+    - gammapy-image-coordinates = gammapy.scripts.image_coordinates:image_coordinates_main
+    - gammapy-image-cwt = gammapy.scripts.image_cwt:image_cwt_main
+    - gammapy-image-lima = gammapy.scripts.image_lima:image_lima
+    - gammapy-image-fit = gammapy.scripts.image_fit:image_fit_main
+    - gammapy-image-lookup = gammapy.scripts.image_lookup:image_lookup_main
+    - gammapy-image-model = gammapy.scripts.image_model:image_model_main
+    - gammapy-image-model-sherpa = gammapy.scripts.image_model_sherpa:image_model_sherpa_main
+    - gammapy-image-pfmap = gammapy.scripts.image_pfmap:image_pfmap_main
+    - gammapy-image-ts = gammapy.scripts.image_ts:image_ts_main
+    - gammapy-cube-bin = gammapy.scripts.cube_bin:cube_bin_main
+    - gammapy-detect = gammapy.scripts.detect:detect_main
+    - gammapy-detect-iterative = gammapy.scripts.detect_iterative:detect_iterative_main
+    - gammapy-catalog-browse = gammapy.scripts.catalog_browser:main
+    - gammapy-catalog-query = gammapy.scripts.catalog_query:cli
+    - gammapy-catalog-simulate = gammapy.scripts.catalog_simulate:catalog_simulate_main
+
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - python
+    - setuptools
+    - click
+    - numpy >=1.8
+    - astropy >=1.1
+
+  run:
+    - python
+    - setuptools
+    - click
+    - numpy >=1.8
+    - astropy >=1.1
+
+test:
+  # Python imports
+  imports:
+    - gammapy
+    - gammapy.astro
+    - gammapy.astro.population
+    - gammapy.astro.population.tests
+    - gammapy.astro.source
+    - gammapy.astro.source.tests
+    - gammapy.background
+    - gammapy.background.tests
+    - gammapy.catalog
+    - gammapy.catalog.tests
+    - gammapy.cube
+    - gammapy.cube.tests
+    - gammapy.data
+    - gammapy.data.tests
+    - gammapy.datasets
+    - gammapy.datasets.tests
+    - gammapy.detect
+    - gammapy.detect.tests
+    - gammapy.extern
+    - gammapy.hspec
+    - gammapy.hspec.models
+    - gammapy.hspec.tests
+    - gammapy.image
+    - gammapy.image.tests
+    - gammapy.irf
+    - gammapy.irf.tests
+    - gammapy.morphology
+    - gammapy.morphology.tests
+    - gammapy.region
+    - gammapy.region.tests
+    - gammapy.scripts
+    - gammapy.scripts.catalog_browser
+    - gammapy.scripts.data_browser
+    - gammapy.scripts.tests
+    - gammapy.spectrum
+    - gammapy.spectrum.tests
+    - gammapy.stats
+    - gammapy.stats.tests
+    - gammapy.tests
+    - gammapy.time
+    - gammapy.time.tests
+    - gammapy.utils
+    - gammapy.utils.coordinates
+    - gammapy.utils.coordinates.tests
+    - gammapy.utils.distributions
+    - gammapy.utils.distributions.tests
+    - gammapy.utils.root
+    - gammapy.utils.root.tests
+    - gammapy.utils.tests
+
+  commands:
+    # You can put test commands to be run here.  Use this to test that the
+    # entry points work.
+
+    - gammapy-info --help
+    - gammapy-test --help
+    - gammapy-data-browse --help
+    - gammapy-data-manage --help
+    - gammapy-data-select --help
+    - gammapy-data-show --help
+    - gammapy-spectrum --help
+    - gammapy-spectrum-hspec --help
+    - gammapy-spectrum-pfsim --help
+    - gammapy-spectrum-regions --help
+    - gammapy-image-bin --help
+    - gammapy-image-coordinates --help
+    - gammapy-image-cwt --help
+    - gammapy-image-lima --help
+    - gammapy-image-fit --help
+    - gammapy-image-lookup --help
+    - gammapy-image-model --help
+    - gammapy-image-model-sherpa --help
+    - gammapy-image-pfmap --help
+    - gammapy-image-ts --help
+    - gammapy-cube-bin --help
+    - gammapy-detect --help
+    - gammapy-detect-iterative --help
+    - gammapy-catalog-browse --help
+    - gammapy-catalog-query --help
+    - gammapy-catalog-simulate --help
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: https://github.com/gammapy/gammapy
+  license: BSD 3-Clause
+  summary: 'A Python package for gamma-ray astronomy'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml
