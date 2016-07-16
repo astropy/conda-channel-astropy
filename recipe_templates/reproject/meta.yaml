@@ -1,5 +1,4 @@
-# Recipe needed to apply patch on Windows.
-# And to include numpy dependency, including pinning the version.
+# Recipe needed to include numpy dependency, including pinning the version.
 
 package:
   name: reproject
@@ -9,9 +8,6 @@ source:
   fn: reproject-{{version}}.tar.gz
   url: https://pypi.io/packages/source/r/reproject/reproject-{{version}}.tar.gz
   md5: {{md5}}
-  patches:
-   # List any patch files here
-    - windows_patch.diff [win]
 
 # build:
   # preserve_egg_dir: True
