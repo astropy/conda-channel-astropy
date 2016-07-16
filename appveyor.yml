@@ -73,8 +73,8 @@ build: off
 
 test_script:
     # So what does it looks like if a variable is undefined in appveyor?
-    - if defined %APPVEYOR_REPO_TAG_NAME% echo Hello else echo "goodbye"
+    - if defined %APPVEYOR_PULL_REQUEST_NUMBER% set UPLOAD="" else UPLOAD="--upload-channels %DESTINATION_CONDA_CHANNEL%"
     # Get ready to build.
     - "%CMD_IN_ENV% extrude_recipes requirements.yml"
     # Packages are uploaded as they are built.
-    - if exist recipes %CMD_IN_ENV% conda build-all recipes --matrix-conditions="python %PYTHON_BUILD_RESTRICTIONS%"  --inspect-channels="astropy" --upload-channels %DESTINATION_CONDA_CHANNEL%
+    - if exist recipes %CMD_IN_ENV% conda build-all recipes --matrix-conditions="python %PYTHON_BUILD_RESTRICTIONS%"  --inspect-channels="astropy" %UPLOAD%
