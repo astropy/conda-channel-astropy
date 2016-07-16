@@ -61,6 +61,7 @@
   version: '0.4'
   setup_options: '--offline'
   numpy_compiled_extensions: false
+  include_extras: false
 
 # Fails because its astropy helpers is ancient/tries to import astropy???
 # - name: pyvo
@@ -200,8 +201,8 @@
 - name: corner
   version: 2.0.1
 
-- name: flask-nav
-  version: 0.5
-
-- name: flask-bootstrap
-  version: 3.3.6.0
+#- name: flask-nav
+#  version: 0.5
+#
+#- name: flask-bootstrap
+#  version: 3.3.6.0
