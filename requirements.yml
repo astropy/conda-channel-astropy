@@ -61,7 +61,7 @@
   version: '0.4'
   setup_options: '--offline'
   numpy_compiled_extensions: false
-  include_extras: false
+  python: '<3.5.2'
 
 # Fails because its astropy helpers is ancient/tries to import astropy???
 # - name: pyvo
