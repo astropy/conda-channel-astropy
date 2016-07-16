@@ -7,6 +7,8 @@ environment:
   # Appveyor machines come with miniconda already installed.
   CONDA_INSTALL_LOCN: "C:\\Miniconda3-x64"
 
+  # Need this to set up compilation on Windows.
+  CMD_IN_ENV: cmd /E:ON /V:ON /C Obvious-CI\scripts\obvci_appveyor_python_build_env.cmd
   # Python version restrictions that should apply to all builds regardless
   # of any package-specific version restrictions
   PYTHON_BUILD_RESTRICTIONS: "2.7*|>=3.4"
@@ -43,6 +45,9 @@ platform:
     - x64
 
 install:
+    # Clone simply to get the script for setting up Windows build environment.
+    - cmd: git clone https://github.com/pelson/Obvious-CI.git
+
     # No need to install miniconda because appveyor comes with it.
     - cmd: SET PATH=%CONDA_INSTALL_LOCN%;%CONDA_INSTALL_LOCN%\Scripts;%PATH%
 
@@ -70,6 +75,6 @@ test_script:
     # So what does it looks like if a variable is undefined in appveyor?
     - if defined %APPVEYOR_PULL_REQUEST_NUMBER% set UPLOAD="" else UPLOAD="--upload-channels %DESTINATION_CONDA_CHANNEL%"
     # Get ready to build.
-    - extrude_recipes requirements.yml"
+    - "%CMD_IN_ENV% extrude_recipes requirements.yml"
     # Packages are uploaded as they are built.
-    - if exist recipes conda build-all recipes --matrix-conditions="python %PYTHON_BUILD_RESTRICTIONS%"  --inspect-channels astropy %UPLOAD%
+    - if exist recipes %CMD_IN_ENV% conda build-all recipes --matrix-conditions="python %PYTHON_BUILD_RESTRICTIONS%"  --inspect-channels astropy %UPLOAD%
