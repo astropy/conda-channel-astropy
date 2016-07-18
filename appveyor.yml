@@ -74,6 +74,7 @@ build: off
 test_script:
     # So what does it looks like if a variable is undefined in appveyor?
     - if defined %APPVEYOR_PULL_REQUEST_NUMBER% set UPLOAD="" else UPLOAD="--upload-channels %DESTINATION_CONDA_CHANNEL%"
+    - echo Upload is %UPLOAD%
     # Get ready to build.
     - "%CMD_IN_ENV% extrude_recipes requirements.yml"
     # Packages are uploaded as they are built.
