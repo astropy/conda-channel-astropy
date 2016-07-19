@@ -36,7 +36,7 @@ requirements:
   build:
     - python
     - setuptools
-    - hgtools   # skeleton does not catch this
+    - setuptools_scm
 
   run:
     - python
