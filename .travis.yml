@@ -20,6 +20,9 @@ env:
         # python 2.6 and 3.3 for some packages.
         - PYTHON_BUILD_RESTRICTIONS="2.7*|>=3.4"
 
+        # The value below needs to be set but will be ignored.
+        - CONDA_NPY="1.11"
+
 # Matrix is fully specified (for now) by os versions
 
 install:
@@ -39,7 +42,7 @@ install:
     - conda config --add channels conda-forge
 
     # Install obvious-ci.
-    - conda install -c conda-forge obvious-ci
+    - conda install -c conda-forge conda-build-all
 
     # Finally, install extruder
     - conda install -c astropy extruder
@@ -47,11 +50,13 @@ install:
     # Install custom version of conda-build for now (need to be able to pass
     # options to setup.py)
     - conda remove --force conda-build
-    - conda install --force openssl=1.0.2d
-    - conda install -c astropy-ci-extras --override-channels conda-build=1.18.1
+    - conda install psutil
+    - conda install -c astropy-ci-extras --override-channels conda-build
 
 script:
+    # Only upload if this is NOT a pull request.
+    - 'if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then UPLOAD="--upload-channels $DESTINATION_CONDA_CHANNEL"; else UPLOAD=""; fi'
     # Get ready to build.
     - extrude_recipes requirements.yml
     # Packages are uploaded as they are built.
-    - if [[ -d recipes ]]; then obvci_conda_build_dir --build-condition="python $PYTHON_BUILD_RESTRICTIONS" recipes $DESTINATION_CONDA_CHANNEL; fi
+    - if [[ -d recipes ]]; then conda build-all recipes --matrix-conditions="python $PYTHON_BUILD_RESTRICTIONS" --inspect-channels astropy conda-forge $UPLOAD; fi
