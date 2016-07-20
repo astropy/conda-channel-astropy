@@ -37,6 +37,7 @@ requirements:
     - python
     - setuptools
     - setuptools_scm
+    - secretstorage
 
   run:
     - python
