@@ -72,6 +72,8 @@ install:
 build: off
 
 test_script:
+    - echo PR number is %APPVEYOR_PULL_REQUEST_NUMBER%
+    - echo tag name is %APPVEYOR_REPO_TAG_NAME%
     # So what does it looks like if a variable is undefined in appveyor?
     - if defined %APPVEYOR_PULL_REQUEST_NUMBER% set UPLOAD="" else UPLOAD="--upload-channels %DESTINATION_CONDA_CHANNEL%"
     - echo Upload is %UPLOAD%
