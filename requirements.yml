@@ -207,3 +207,6 @@
 #
 #- name: flask-bootstrap
 #  version: 3.3.6.0
+
+- name: secretstorage
+  version: 2.2.1
