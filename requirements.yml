@@ -210,3 +210,6 @@
 
 - name: secretstorage
   version: 2.2.1
+
+- name: dbus-python
+  version: 1.2.4
