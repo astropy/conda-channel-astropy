@@ -55,6 +55,7 @@ install:
     - cmd: conda update --quiet conda
     - cmd: conda config --add channels astropy
     - cmd: conda config --add channels conda-forge
+    - cmd: conda install conda-build>=1.21.6
     - cmd: conda install --quiet astropy anaconda-client jinja2 cython
     # These installs are needed on windows but not other platforms.
     - cmd: conda install patch psutil
@@ -73,9 +74,9 @@ build: off
 
 test_script:
     # So what does it looks like if a variable is undefined in appveyor?
-    - if defined %APPVEYOR_PULL_REQUEST_NUMBER% set UPLOAD="" else UPLOAD="--upload-channels %DESTINATION_CONDA_CHANNEL%"
+    - if defined APPVEYOR_PULL_REQUEST_NUMBER (set UPLOAD=) else (set UPLOAD=--upload-channels %DESTINATION_CONDA_CHANNEL%)
     - echo Upload is %UPLOAD%
     # Get ready to build.
     - "%CMD_IN_ENV% extrude_recipes requirements.yml"
     # Packages are uploaded as they are built.
-    - if exist recipes %CMD_IN_ENV% conda build-all recipes --matrix-conditions="python %PYTHON_BUILD_RESTRICTIONS%"  --inspect-channels astropy conda-forge %UPLOAD%
+    - if exist recipes %CMD_IN_ENV% conda build-all recipes --matrix-conditions="python %PYTHON_BUILD_RESTRICTIONS%"  --inspect-channels astropy %UPLOAD%
