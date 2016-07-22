@@ -68,8 +68,10 @@ install:
 
     # Install custom version of conda-build for now (need to be able to pass
     # options to setup.py)
-    #- cmd: conda remove --force conda-build
-    #- cmd: conda install -c astropy-ci-extras --override-channels conda-build
+    - cmd: conda remove --force conda-build
+    - cmd: cd conda-build && git checkout consolidate_bin_prepend && python setup.py install && cd ..
+    - cmd: conda list conda-build
+    # - cmd: conda install -c astropy-ci-extras --override-channels conda-build
 
 # Skip .NET project specific build phase.
 build: off
