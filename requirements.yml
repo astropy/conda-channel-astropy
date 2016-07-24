@@ -185,13 +185,12 @@
 - name: hgtools
   version: '6.3'
 
-# keyring has a recipe template
 - name: keyring
   version: '9.0'
 
 # lmfit is required for omnifit
 - name: lmfit
-  version: '0.9.3'
+  version: '0.9.4'
 
 - name: iminuit
   version: 1.2
