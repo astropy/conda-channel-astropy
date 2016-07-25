@@ -80,6 +80,8 @@
   setup_options: '--offline'
   numpy_compiled_extensions: false
   python: '<3.5.2'
+  excluded_platforms:
+      - 'win-64'
 
 # APLpy currently has a recipe template
 - name: APLpy
