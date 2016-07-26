@@ -49,8 +49,6 @@ install:
     # Finally, install extruder
     - conda install -c astropy extruder
 
-    - conda install psutil
-
 
 script:
     # Only upload if this is NOT a pull request.
