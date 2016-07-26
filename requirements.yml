@@ -178,6 +178,10 @@
   excluded_platforms:
       - 'win-64'
 
+- name: regions
+  version: '0.1'
+  setup_options: '--offline'
+
 
 ################################################################
 # These are additional dependencies of some of the affiliated  #
