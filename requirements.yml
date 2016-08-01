@@ -48,7 +48,7 @@
 
 # ccdproc has a recipe template
 - name: ccdproc
-  version: 1.0.1
+  version: 1.1.0
   setup_options: '--offline'
   numpy_compiled_extensions: false
 
