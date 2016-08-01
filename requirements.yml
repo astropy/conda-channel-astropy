@@ -184,6 +184,9 @@
   setup_options: '--offline'
   include_extras: false
 
+- name: glueviz
+  version: '0.8.2'
+
 
 ################################################################
 # These are additional dependencies of some of the affiliated  #
