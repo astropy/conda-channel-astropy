@@ -31,14 +31,16 @@ source:
 requirements:
   build:
     - python
+    - astropy
     - setuptools
     - pyparsing !=2.0.0
-    - numpy x.x   # pin the numpy version, please...
+    - numpy >1.6
 
   run:
     - python
+    - astropy
     - pyparsing !=2.0.0
-    - numpy x.x  # Yes, you need x.x in both places
+    - numpy >1.6
 
 test:
   # Python imports
