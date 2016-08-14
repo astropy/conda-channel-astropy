@@ -38,6 +38,7 @@ requirements:
     - numpy x.x
     - numpy >1.6
     - matplotlib
+    - astropy-helpers
 
   run:
     - python
