@@ -37,6 +37,7 @@ requirements:
     - pyparsing !=2.0.0
     - numpy x.x
     - numpy >1.6
+    - matplotlib
 
   run:
     - python
@@ -44,6 +45,7 @@ requirements:
     - pyparsing !=2.0.0
     - numpy x.x
     - numpy >1.6
+    - matplotlib
 
 test:
   # Python imports
