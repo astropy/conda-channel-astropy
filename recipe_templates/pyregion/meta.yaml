@@ -34,12 +34,14 @@ requirements:
     - astropy
     - setuptools
     - pyparsing !=2.0.0
+    - numpy x.x
     - numpy >1.6
 
   run:
     - python
     - astropy
     - pyparsing !=2.0.0
+    - numpy x.x
     - numpy >1.6
 
 test:
