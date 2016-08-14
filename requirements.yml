@@ -204,7 +204,7 @@
 
 # lmfit is required for omnifit
 - name: lmfit
-  version: '0.9.4'
+  version: '0.9.5'
 
 - name: iminuit
   version: 1.2
