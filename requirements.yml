@@ -173,7 +173,7 @@
   setup_options: '--offline'
 
 - name: halotools
-  version: '0.3'
+  version: '0.4'
   setup_options: '--offline'
   python: '>=2.7'
   excluded_platforms:
@@ -204,7 +204,7 @@
 
 # lmfit is required for omnifit
 - name: lmfit
-  version: '0.9.4'
+  version: '0.9.5'
 
 - name: iminuit
   version: 1.2
