@@ -32,6 +32,7 @@ requirements:
   build:
     - python
     - astropy
+    - cython
     - setuptools
     - pyparsing !=2.0.0
     - numpy x.x
@@ -62,7 +63,7 @@ test:
     # - nose
 
 about:
-  home: http://leejjoon.github.com/pyregion/
+  home: http://pyregion.readthedocs.org/
   license: MIT License
   summary: 'python parser for ds9 region files'
 
