@@ -4,7 +4,7 @@ package:
 
 source:
   fn: specutils-{{version}}.tar.gz
-  url: https://pypi.io/packages/source/s/specutils/specutils-0.2.1.tar.gz
+  url: https://pypi.io/packages/source/s/specutils/specutils-{{version}}.tar.gz
   md5: {{ md5 }}
 #  patches:
    # List any patch files here
