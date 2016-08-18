@@ -214,3 +214,6 @@
 
 - name: corner
   version: 2.0.1
+
+- name: pytest-mpl
+  version: 0.5
