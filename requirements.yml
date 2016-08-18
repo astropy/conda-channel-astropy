@@ -203,8 +203,9 @@
   version: '9.0'
 
 # lmfit is required for omnifit
-- name: lmfit
-  version: '0.9.5'
+# Testing whether this was the problem for #73
+#- name: lmfit
+#  version: '0.9.5'
 
 - name: iminuit
   version: 1.2
