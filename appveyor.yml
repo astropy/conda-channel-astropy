@@ -11,7 +11,7 @@ environment:
   CMD_IN_ENV: cmd /E:ON /V:ON /C Obvious-CI\scripts\obvci_appveyor_python_build_env.cmd
   # Python version restrictions that should apply to all builds regardless
   # of any package-specific version restrictions
-  PYTHON_BUILD_RESTRICTIONS: "2.7*|>=3.4"
+  PYTHON_BUILD_RESTRICTIONS: "2.7*|>3.4"
 
   BINSTAR_TOKEN:
     # Paste the security token for your destination conda channel here.
