@@ -11,7 +11,7 @@ environment:
   CMD_IN_ENV: cmd /E:ON /V:ON /C Obvious-CI\scripts\obvci_appveyor_python_build_env.cmd
   # Python version restrictions that should apply to all builds regardless
   # of any package-specific version restrictions
-  PYTHON_BUILD_RESTRICTIONS: "2.7*|>3.4"
+  PYTHON_BUILD_RESTRICTIONS: "2.7*|>=3.4"
 
   BINSTAR_TOKEN:
     # Paste the security token for your destination conda channel here.
@@ -25,15 +25,15 @@ environment:
     # python version. Right now conda build does not configure the SDK, and
     # the appveyor setup only sets up the SDK once, so separate by python
     # versions.
-    # - TARGET_ARCH: "x64"
-    #   PYTHON_BUILD_RESTRICTIONS: "2.7*"
-    #   CONDA_PY: "27"
     - TARGET_ARCH: "x64"
-    #  PYTHON_BUILD_RESTRICTIONS: "3.4*"
+      PYTHON_BUILD_RESTRICTIONS: "2.7*"
+      CONDA_PY: "27"
+    - TARGET_ARCH: "x64"
+      PYTHON_BUILD_RESTRICTIONS: "3.4*"
       CONDA_PY: "34"
-    # - TARGET_ARCH: "x64"
-    #   PYTHON_BUILD_RESTRICTIONS: "3.5*"
-    #   CONDA_PY: "35"
+    - TARGET_ARCH: "x64"
+      PYTHON_BUILD_RESTRICTIONS: "3.5*"
+      CONDA_PY: "35"
     # For 32 bit builds there are no compiler issues, let Obvious-CI
     # handle the matrix.
     # - TARGET_ARCH: "x86"
