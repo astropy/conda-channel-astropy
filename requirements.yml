@@ -124,7 +124,7 @@
   python: '>=2.6|>=3.3'
 
 - name: ginga
-  version: 2.5.20160802122200
+  version: 2.5.20160901093400
   numpy_compiled_extensions: false
   python: '>2.6'
   setup_options: '--offline'
