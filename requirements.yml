@@ -145,7 +145,7 @@
   version: '0.2'
   setup_options: '--offline'
   numpy_compiled_extensions: false
-  include_extras: false
+  include_extras: true
 
 # python-cpl has a recipe template for now
 - name: python-cpl
