@@ -169,7 +169,7 @@
   python: '<3.5.2'
 
 - name: spectral-cube
-  version: '0.3.2'
+  version: '0.4.0'
   setup_options: '--offline'
 
 - name: halotools
