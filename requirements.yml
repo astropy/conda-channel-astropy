@@ -188,6 +188,11 @@
 #- name: glueviz
 #  version: '0.8.2'
 
+- name: astro-gala
+  version: '0.1.3'
+  setup_options: '--offline'
+  excluded_platforms:
+      - 'win-64'
 
 ################################################################
 # These are additional dependencies of some of the affiliated  #
