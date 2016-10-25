@@ -23,6 +23,9 @@ env:
         # The value below needs to be set but will be ignored.
         - CONDA_NPY="1.11"
 
+        # Try the older OSX image
+        - osx_image: beta-xcode6.1
+
 # Matrix is fully specified (for now) by os versions
 
 install:
