@@ -7,7 +7,7 @@ os:
   - osx
 
 # Try the older OSX image
-osx_image: beta-xcode6.1
+osx_image: xcode6.4
 
 env:
     global:
