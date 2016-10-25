@@ -6,9 +6,6 @@ os:
   - linux
   - osx
 
-# Try the older OSX image
-osx_image: xcode6.4
-
 env:
     global:
         - DESTINATION_CONDA_CHANNEL="astropy"
