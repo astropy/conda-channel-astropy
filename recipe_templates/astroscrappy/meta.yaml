@@ -21,6 +21,7 @@ requirements:
     - cython
     - numpy x.x
     - numpy >=1.9
+    - toolchain
 
   run:
     - python
