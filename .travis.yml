@@ -41,6 +41,10 @@ install:
     - conda config --add channels astropy
     - conda config --add channels conda-forge
 
+    # "Add" defaults to make it the highest priority channel to avoid
+    # downgrading conda itself from conda-forge.
+    - conda config --add channels defaults
+
     - conda install conda-build=2.0*
 
     # Install conda-build-all
