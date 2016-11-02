@@ -188,6 +188,12 @@
   excluded_platforms:
       - 'win-64'
 
+- name: saba
+  version: '0.1'
+  setup_options: '--offline'
+  excluded_platforms:
+      - 'win-64'
+
 ################################################################
 # These are additional dependencies of some of the affiliated  #
 # packages we build above                                      #
