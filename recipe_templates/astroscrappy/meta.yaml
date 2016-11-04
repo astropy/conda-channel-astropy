@@ -12,9 +12,6 @@ source:
   fn: astroscrappy-{{version}}.tar.gz
   url: https://pypi.io/packages/source/a/astroscrappy/astroscrappy-{{version}}.tar.gz
   md5: {{md5}}
-  patches:
-   # List any patch files here
-    - windows_patch.diff [win]
 
 requirements:
   build:
@@ -24,6 +21,7 @@ requirements:
     - cython
     - numpy x.x
     - numpy >=1.9
+    - toolchain
 
   run:
     - python
