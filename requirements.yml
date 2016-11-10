@@ -185,7 +185,7 @@
   include_extras: false
 
 - name: glueviz
-  version: '0.9.0'
+  version: '0.9.1'
 
 - name: astro-gala
   version: '0.1.3'
