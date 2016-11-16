@@ -37,13 +37,14 @@ requirements:
     - scipy
     - astropy
     - astropy-helpers  # If this ever gets submoduled in here this recipe can go
-    - cython # There is now one cython file included.
+    - extinction >=0.2.2
 
   run:
     - python
     - numpy
     - scipy
     - astropy
+    - extinction >=0.2.2
 
 test:
   # Python imports
