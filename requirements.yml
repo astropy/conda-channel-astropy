@@ -222,7 +222,7 @@
   version: 2.0.1
 
 - name: pytest-mpl
-  version: 0.6
+  version: 0.7
 
 - name: extinction
   version: 0.2.2
