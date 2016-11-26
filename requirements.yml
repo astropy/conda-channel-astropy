@@ -224,5 +224,8 @@
 - name: pytest-mpl
   version: 0.6
 
+- name: pytest-arraydiff
+  version: 0.1
+
 - name: extinction
   version: 0.2.2
