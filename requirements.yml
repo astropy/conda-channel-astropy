@@ -188,6 +188,7 @@
 #- name: glueviz
 #  version: '0.8.2'
 
+# cluster-lensing has a recipe template
 - name: cluster-lensing
   version: 0.1.2
   excluded_platforms:
