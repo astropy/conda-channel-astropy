@@ -108,7 +108,7 @@
 
 # asdf has a recipe template
 - name: asdf
-  version: 1.2.0
+  version: 1.2.1
   setup_options: '--offline'
   numpy_compiled_extensions: false
 
