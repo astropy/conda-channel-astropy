@@ -1,5 +1,5 @@
 # Recipe template to avoid bad import test created by skeleton.
-
+# Also adds runtime dependencies, which are not in setup.py.
 package:
   name: cluster-lensing
   version: "{{ version }}"
@@ -35,6 +35,10 @@ requirements:
 
   run:
     - python
+    - numpy
+    - astropy
+    - scipy
+    - pandas
 
 test:
   # Python imports
