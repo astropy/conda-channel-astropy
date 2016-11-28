@@ -82,5 +82,4 @@ script:
     # Get ready to build.
     - extrude_recipes requirements.yml
     # Packages are uploaded as they are built.
-
-    - if [[ -d recipes ]]; then conda build-all recipes --matrix-conditions "python $PYTHON_BUILD_RESTRICTIONS" $NUMPY_BUILD_RESTRICTION  --matrix-max-n-minor-versions $MAX_N_MINOR_VERSIONS --inspect-channels conda-forge astropy $UPLOAD; fi
+    - if [[ -d recipes ]]; then conda build-all recipes --matrix-conditions "python $PYTHON_BUILD_RESTRICTIONS" $NUMPY_BUILD_RESTRICTION  --matrix-max-n-minor-versions $MAX_N_MINOR_VERSIONS --inspect-channels conda-forge astropy sherpa $UPLOAD; fi
