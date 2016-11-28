@@ -1,0 +1,32 @@
+# Recipe template to avoid bad import test created by skeleton.
+# Also adds runtime dependencies, which are not in setup.py.
+package:
+  name: saba
+  version: "{{ version }}"
+
+source:
+  fn: saba-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/s/saba/saba-{{ version }}.tar.gz
+  md5: {{md5}}
+
+requirements:
+  build:
+    - python
+    - setuptools
+
+  run:
+    - python
+    - numpy
+    - astropy
+    - sherpa
+
+test:
+  # Python imports
+  imports:
+    - saba
+
+about:
+  home: http://github.com/astropy/saba
+  license: GPLv3+
+  summary: 'Bridge between Sherpa and Astropy modeling'
+
