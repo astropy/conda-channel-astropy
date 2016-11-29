@@ -56,6 +56,7 @@
 
 - name: wcsaxes
 
+# gammapy has a recipe template
 - name: gammapy
   version: '0.6'
   setup_options: '--offline'
@@ -148,12 +149,14 @@
   setup_options: '--offline'
   numpy_compiled_extensions: true
 
+# omnifit has a recipe template
 - name: omnifit
   version: '0.2.1'
   setup_options: '--offline'
   python: '<3.5.2'
 
 # maltpynt does not seem to actually update astropy_helpers during setup.
+# maltpynt has a recipe template
 - name: maltpynt
   version: '2.0'
   setup_options: '--offline'
