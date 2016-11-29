@@ -188,9 +188,9 @@
   excluded_platforms:
       - 'win-64'
 
+# saba has a recipe template
 - name: saba
   version: '0.1'
-  setup_options: '--offline'
   excluded_platforms:
       - 'win-64'
 
