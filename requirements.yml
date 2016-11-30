@@ -193,7 +193,7 @@
 
 # saba has a recipe template
 - name: saba
-  version: '0.1'
+  version: '0.1.1'
   excluded_platforms:
       - 'win-64'
 
