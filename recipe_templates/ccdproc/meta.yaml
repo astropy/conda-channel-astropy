@@ -1,5 +1,5 @@
-# Needs recipe template to avoid import of pytest-capturelog when
-# import tests are run.
+# Needs recipe template to include dask as a dependency...because scitkit image
+# depends on dask but it is not list as a dependency of scitkit image.
 package:
   name: ccdproc
   version: "{{version}}"
@@ -37,6 +37,8 @@ requirements:
     - scipy
     - astroscrappy
     - reproject
+    - scikit-image
+    - dask
 
   run:
     - python
@@ -45,6 +47,8 @@ requirements:
     - scipy
     - astroscrappy
     - reproject
+    - scikit-image
+    - dask
 
 test:
   # Python imports
