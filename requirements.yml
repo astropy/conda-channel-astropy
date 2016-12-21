@@ -131,7 +131,7 @@
 
 # naima has a recipe template
 - name: naima
-  version: '0.7.1'
+  version: '0.8'
   setup_options: '--offline'
   numpy_compiled_extensions: false
 
