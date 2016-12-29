@@ -56,7 +56,13 @@ install:
 
 script:
     # Only upload if this is NOT a pull request.
-    - 'if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then UPLOAD="--upload-channels $DESTINATION_CONDA_CHANNEL"; else UPLOAD=""; fi'
+    - UPLOAD="";
+    - if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then
+        if [ $TRAVIS_REPO_SLUG = "astropy/conda-channel-astropy" ]; then
+          echo "Uploading enabled";
+          UPLOAD="--upload-channels $DESTINATION_CONDA_CHANNEL";
+        fi;
+      fi
     # Get ready to build.
     - extrude_recipes requirements.yml
     # Packages are uploaded as they are built.
