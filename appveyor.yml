@@ -72,7 +72,6 @@ test_script:
     - set UPLOAD=
     - if not defined APPVEYOR_PULL_REQUEST_NUMBER (if %APPVEYOR_ACCOUNT_NAME%==Astropy (set UPLOAD=--upload-channels %DESTINATION_CONDA_CHANNEL%))
     - echo Upload is %UPLOAD%
-    - echo name is %APPVEYOR_ACCOUNT_NAME%
     # Get ready to build.
     - "%CMD_IN_ENV% extrude_recipes requirements.yml"
     # Packages are uploaded as they are built.
