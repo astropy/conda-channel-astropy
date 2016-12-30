@@ -70,7 +70,7 @@ build: off
 test_script:
     # So what does it looks like if a variable is undefined in appveyor?
     - set UPLOAD=
-    - if not defined APPVEYOR_PULL_REQUEST_NUMBER (if APPVEYOR_ACCOUNT_NAME != "Astropy" (set UPLOAD=--upload-channels %DESTINATION_CONDA_CHANNEL%))
+    - if not defined APPVEYOR_PULL_REQUEST_NUMBER (if APPVEYOR_ACCOUNT_NAME not "Astropy" (set UPLOAD=--upload-channels %DESTINATION_CONDA_CHANNEL%))
     - echo Upload is %UPLOAD%
     # Get ready to build.
     - "%CMD_IN_ENV% extrude_recipes requirements.yml"
