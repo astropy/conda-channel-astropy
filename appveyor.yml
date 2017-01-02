@@ -63,6 +63,8 @@ install:
     # Finally, install extruder
     - cmd: conda install extruder
 
+    - cmd: conda install -c conda-canary conda-build
+
     # What is conda build version right before we start building?
     - cmd: conda list conda-build
 
