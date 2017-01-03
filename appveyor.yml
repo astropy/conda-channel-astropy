@@ -63,7 +63,7 @@ install:
     # Finally, install extruder
     - cmd: conda install extruder
 
-    - cmd: conda install -c conda-canary conda-build
+    - cmd: conda install -c conda-forge vs2008_express_vc_python_patch
 
     # What is conda build version right before we start building?
     - cmd: conda list conda-build
