@@ -186,6 +186,7 @@
 
 - name: glueviz
   version: '0.9.1'
+  python: '<3.6*'
 
 # cluster-lensing has a recipe template
 - name: cluster-lensing
