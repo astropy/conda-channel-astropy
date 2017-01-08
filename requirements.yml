@@ -34,6 +34,7 @@
   version: 1.4.0
   setup_options: '--offline'
   numpy_compiled_extensions: false
+  python: '<3.6*'
 
 - name: pydl
   version: 0.5.3
@@ -45,17 +46,20 @@
   version: 0.9.8
   setup_options: '--offline'
   numpy_compiled_extensions: false
+  python: '<3.6*'
 
 # ccdproc has a recipe template
 - name: ccdproc
   version: 1.2.0
   setup_options: '--offline'
   numpy_compiled_extensions: false
+  python: '<3.6*'
 
 - name: wcsaxes
   version: '0.9'
   setup_options: '--offline'
   numpy_compiled_extensions: false
+  python: '<3.6*'
 
 - name: gammapy
   version: '0.4'
@@ -63,6 +67,7 @@
   numpy_compiled_extensions: false
   python: '<3.5.2'
   include_extras: false
+  python: '<3.6*'
 
 # Fails because its astropy helpers is ancient/tries to import astropy???
 # - name: pyvo
@@ -82,6 +87,7 @@
   python: '<3.5.2'
   excluded_platforms:
       - 'win-64'
+  python: '<3.6*'
 
 # APLpy currently has a recipe template
 - name: APLpy
@@ -93,6 +99,7 @@
   version: '0.2.2'
   setup_options: '--offline'
   numpy_compiled_extensions: false
+  python: '<3.6*'
 
 # imexam has a recipe template
 - name: imexam
@@ -134,12 +141,14 @@
   version: '0.8'
   setup_options: '--offline'
   numpy_compiled_extensions: false
+  python: '<3.6*'
 
 # reproject has a recipe template
 - name: reproject
   version: '0.3.1'
   setup_options: '--offline'
   numpy_compiled_extensions: true
+  python: '<3.6*'
 
 - name: astroplan
   version: '0.2'
@@ -160,6 +169,7 @@
 - name: omnifit
   version: '0.2.1'
   setup_options: '--offline'
+  python: '<3.6*'
 
 # maltpynt does not seem to actually update astropy_helpers during setup.
 - name: maltpynt
@@ -167,10 +177,12 @@
   setup_options: '--offline'
   numpy_compiled_extensions: false
   python: '<3.5.2'
+  python: '<3.6*'
 
 - name: spectral-cube
   version: '0.4.0'
   setup_options: '--offline'
+  python: '<3.6*'
 
 - name: halotools
   version: '0.4'
@@ -207,12 +219,15 @@
 
 - name: pyephem
   version: 3.7.6.0
+  python: '<3.6*'
 
 - name: hgtools
   version: '6.3'
+  python: '<3.6*'
 
 - name: keyring
   version: '9.0'
+  python: '<3.6*'
 
 # lmfit is required for omnifit
 # Testing whether this was the problem for #73
@@ -221,6 +236,7 @@
 
 - name: iminuit
   version: 1.2
+  python: '<3.6*'
 
 - name: emcee
   version: 2.2.1
@@ -232,9 +248,12 @@
 
 - name: pytest-mpl
   version: 0.7
+  python: '<3.6*'
 
 - name: pytest-arraydiff
   version: 0.1
+  python: '<3.6*'
 
 - name: extinction
   version: 0.3.0
+  python: '<3.6*'
