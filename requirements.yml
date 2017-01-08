@@ -227,6 +227,7 @@
 
 - name: corner
   version: 2.0.1
+  python: '<3.6*'
 
 - name: pytest-mpl
   version: 0.7
