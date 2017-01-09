@@ -53,13 +53,11 @@
   version: 1.2.0
   setup_options: '--offline'
   numpy_compiled_extensions: false
-  python: '<3.6*'
 
 - name: wcsaxes
   version: '0.9'
   setup_options: '--offline'
   numpy_compiled_extensions: false
-  python: '<3.6*'
 
 - name: gammapy
   version: '0.4'
@@ -87,7 +85,6 @@
   python: '<3.5.2'
   excluded_platforms:
       - 'win-64'
-  python: '<3.6*'
 
 # APLpy currently has a recipe template
 - name: APLpy
@@ -99,7 +96,6 @@
   version: '0.2.2'
   setup_options: '--offline'
   numpy_compiled_extensions: false
-  python: '<3.6*'
 
 # imexam has a recipe template
 - name: imexam
@@ -141,7 +137,6 @@
   version: '0.8'
   setup_options: '--offline'
   numpy_compiled_extensions: false
-  python: '<3.6*'
 
 # reproject has a recipe template
 - name: reproject
@@ -169,7 +164,6 @@
 - name: omnifit
   version: '0.2.1'
   setup_options: '--offline'
-  python: '<3.6*'
 
 # maltpynt does not seem to actually update astropy_helpers during setup.
 - name: maltpynt
@@ -177,12 +171,10 @@
   setup_options: '--offline'
   numpy_compiled_extensions: false
   python: '<3.5.2'
-  python: '<3.6*'
 
 - name: spectral-cube
   version: '0.4.0'
   setup_options: '--offline'
-  python: '<3.6*'
 
 - name: halotools
   version: '0.4'
