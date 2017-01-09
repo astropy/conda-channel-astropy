@@ -18,7 +18,7 @@ env:
         # The python build restriction MUST be set at the moment, though it
         # can have any value. The setting below avoids known-bad builds on
         # python 2.6 and 3.3 for some packages.
-        - PYTHON_BUILD_RESTRICTIONS="2.7*|>=3.4,<3.6"
+        - PYTHON_BUILD_RESTRICTIONS="2.7*|>=3.4"
 
         # The value below needs to be set but will be ignored.
         - CONDA_NPY="1.11"
@@ -66,4 +66,4 @@ script:
     # Get ready to build.
     - extrude_recipes requirements.yml
     # Packages are uploaded as they are built.
-    - if [[ -d recipes ]]; then conda build-all recipes --matrix-conditions="python $PYTHON_BUILD_RESTRICTIONS" --inspect-channels conda-forge astropy $UPLOAD; fi
+    - if [[ -d recipes ]]; then conda build-all recipes --matrix-conditions="python $PYTHON_BUILD_RESTRICTIONS"  --matrix-max-n-minor-versions 3 --inspect-channels conda-forge astropy $UPLOAD; fi
