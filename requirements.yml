@@ -217,10 +217,6 @@
   version: '6.3'
   python: '<3.6*'
 
-- name: keyring
-  version: '9.0'
-  python: '<3.6*'
-
 # lmfit is required for omnifit
 # Testing whether this was the problem for #73
 #- name: lmfit
