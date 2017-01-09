@@ -40,7 +40,6 @@ requirements:
     - matplotlib
     - ipython
     - python
-    - python >2.6,<3
     - mock
     - nose
   run:
@@ -52,7 +51,6 @@ requirements:
     - matplotlib
     - ipython
     - python
-    - python >2.6,<3
 
 test:
   # Python imports
