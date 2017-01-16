@@ -67,6 +67,9 @@ install:
     # Finally, install extruder
     - cmd: conda install extruder
 
+    # To ease debugging, list installed packages
+    - cmd: conda info -a
+
 # Skip .NET project specific build phase.
 build: off
 

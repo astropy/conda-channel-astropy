@@ -53,6 +53,8 @@ install:
     # Finally, install extruder
     - conda install -c astropy extruder
 
+    # To ease debugging, list installed packages
+    - conda info -a
 
 script:
     # Only upload if this is NOT a pull request.
