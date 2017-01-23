@@ -72,4 +72,8 @@ script:
     # Get ready to build.
     - extrude_recipes requirements.yml
     # Packages are uploaded as they are built.
-    - if [[ -d recipes ]]; then conda build-all recipes --matrix-conditions="python $PYTHON_BUILD_RESTRICTIONS"  --matrix-max-n-minor-versions 3 --inspect-channels conda-forge astropy $UPLOAD; fi
+
+    # We do not want to pick up numpy 1.12 just yet, temporarily disabling
+    # conda-forge
+    - conda config --remove channels conda-forge
+    - if [[ -d recipes ]]; then conda build-all recipes --matrix-conditions="python $PYTHON_BUILD_RESTRICTIONS"  --matrix-max-n-minor-versions 3 --inspect-channels astropy $UPLOAD; fi
