@@ -19,9 +19,18 @@ env:
         # can have any value. The setting below avoids known-bad builds on
         # python 2.6 and 3.3 for some packages.
         - PYTHON_BUILD_RESTRICTIONS="2.7*|>=3.4"
+        # If you want to restrict the numpy version beyond what is in the
+        # individual package requirements, do that here. Can be helpful after
+        # a new numpy release while continuum and conda-forge are still building
+        # out support for the release.
+
+        # If you do not want a numpy build restriction, set
+        # NUMPY_BUILD_RESTRICTION=""
+        - NUMPY_BUILD_RESTRICTION="numpy <1.12"
 
         # The value below needs to be set but will be ignored.
         - CONDA_NPY="1.11"
+        - CONDA_VERSION=4.2*
 
 # Matrix is fully specified (for now) by os versions
 
@@ -32,6 +41,9 @@ install:
     - bash miniconda.sh -b -p $CONDA_INSTALL_LOCN
     - export PATH=${CONDA_INSTALL_LOCN}/bin:$PATH
     - conda config --set always_yes true
+
+    - PIN_FILE_CONDA=${CONDA_INSTALL_LOCN}/conda-meta/pinned
+    - echo "conda ${CONDA_VERSION}" > $PIN_FILE_CONDA
 
     - conda update --quiet conda
 
@@ -68,4 +80,5 @@ script:
     # Get ready to build.
     - extrude_recipes requirements.yml
     # Packages are uploaded as they are built.
-    - if [[ -d recipes ]]; then conda build-all recipes --matrix-conditions="python $PYTHON_BUILD_RESTRICTIONS"  --matrix-max-n-minor-versions 3 --inspect-channels conda-forge astropy $UPLOAD; fi
+
+    - if [[ -d recipes ]]; then conda build-all recipes --matrix-conditions "python $PYTHON_BUILD_RESTRICTIONS" "$NUMPY_BUILD_RESTRICTION"  --matrix-max-n-minor-versions 3 --inspect-channels conda-forge astropy $UPLOAD; fi

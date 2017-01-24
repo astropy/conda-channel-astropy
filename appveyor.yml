@@ -12,13 +12,21 @@ environment:
   # Python version restrictions that should apply to all builds regardless
   # of any package-specific version restrictions
   PYTHON_BUILD_RESTRICTIONS: "2.7*|>=3.4"
+  # If you want to restrict the numpy version beyond what is in the
+  # individual package requirements, do that here. Can be helpful after
+  # a new numpy release while continuum and conda-forge are still building
+  # out support for the release.
 
+  # If you do not want a numpy build restriction, set
+  # NUMPY_BUILD_RESTRICTION=""
+  NUMPY_BUILD_RESTRICTION: "numpy <1.12"
   BINSTAR_TOKEN:
     # Paste the security token for your destination conda channel here.
     secure: In551w7v371boSMxAcNcHccXMbcLyVImifhayYopb02ZqkUGYV8QyDu1tjVbKaJz
 
   # The value below will be ignored but needs to be set for conda-build-all
   CONDA_NPY: "1.11"
+  CONDA_VERSION: "4.2.*"
 
   matrix:
     # Unfortunately, compiler/SDK configuration for 64 bit builds depends on
@@ -55,7 +63,7 @@ install:
     - cmd: SET PATH=%CONDA_INSTALL_LOCN%;%CONDA_INSTALL_LOCN%\Scripts;%PATH%
 
     - cmd: conda config --set always_yes true
-    - cmd: conda update --quiet conda
+    - cmd: conda install --quiet conda=%CONDA_VERSION%
     - cmd: conda config --add channels astropy
     - cmd: conda config --add channels conda-forge
     - cmd: conda install conda-build=2.0.10
@@ -81,4 +89,4 @@ test_script:
     # Get ready to build.
     - "%CMD_IN_ENV% extrude_recipes requirements.yml"
     # Packages are uploaded as they are built.
-    - if exist recipes %CMD_IN_ENV% conda build-all recipes --matrix-conditions="python %PYTHON_BUILD_RESTRICTIONS%"  --matrix-max-n-minor-versions 3 --inspect-channels conda-forge astropy %UPLOAD%
+    - if exist recipes %CMD_IN_ENV% conda build-all recipes --matrix-conditions "python %PYTHON_BUILD_RESTRICTIONS%" "%NUMPY_BUILD_RESTRICTION%"  --matrix-max-n-minor-versions 3 --inspect-channels conda-forge astropy %UPLOAD%
