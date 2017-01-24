@@ -96,7 +96,6 @@
   setup_options: '--offline'
   numpy_compiled_extensions: false
 
-# imexam has a recipe template
 - name: imexam
   version: 0.6.3
   setup_options: '--offline'
