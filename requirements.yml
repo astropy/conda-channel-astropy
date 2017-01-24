@@ -98,7 +98,7 @@
 
 # imexam has a recipe template
 - name: imexam
-  version: 0.6.3
+  version: 0.7.0
   setup_options: '--offline'
   numpy_compiled_extensions: false
   python: '>2.6,<3'
