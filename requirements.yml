@@ -89,7 +89,6 @@
 - name: APLpy
   version: '1.1.1'
   setup_options: '--offline'
-  python: '<3.6*'
 
 - name: specutils
   version: '0.2.2'
@@ -233,7 +232,6 @@
 
 - name: pytest-mpl
   version: 0.7
-  python: '<3.6*'
 
 - name: pytest-arraydiff
   version: 0.1
