@@ -65,6 +65,7 @@ install:
     - cmd: conda config --set always_yes true
     - cmd: conda install --quiet conda=%CONDA_VERSION%
     - cmd: conda config --add channels astropy
+    - cmd: conda config --add channels astropy-ci-extras
     - cmd: conda config --add channels conda-forge
     - cmd: conda install conda-build=2.0.10
     - cmd: conda install --quiet astropy anaconda-client jinja2 cython
