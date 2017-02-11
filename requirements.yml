@@ -186,9 +186,9 @@
   setup_options: '--offline'
   include_extras: false
 
-- name: glueviz
-  version: '0.9.1'
-  python: '<3.6*'
+#- name: glueviz
+#  version: '0.9.1'
+#  python: '<3.6*'
 
 # cluster-lensing has a recipe template
 - name: cluster-lensing
