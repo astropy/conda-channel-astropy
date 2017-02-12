@@ -144,6 +144,7 @@
   python: '2.7*|>=3.5*'
   excluded_platforms:
       - 'osx-64'
+      - 'win-64'
 
 - name: astroplan
   version: '0.2'
