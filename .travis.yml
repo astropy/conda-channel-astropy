@@ -25,11 +25,10 @@ env:
         # out support for the release.
 
         # If you do not want a numpy build restriction, set
-        # NUMPY_BUILD_RESTRICTION=""
-        - NUMPY_BUILD_RESTRICTION="numpy <1.12"
+        - NUMPY_BUILD_RESTRICTION=
 
         # The value below needs to be set but will be ignored.
-        - CONDA_NPY="1.11"
+        - CONDA_NPY="1.12"
         - CONDA_VERSION=4.2*
         # the python version restriction above overrides this broader setting.
         - MAX_N_MINOR_VERSIONS="4"
@@ -84,4 +83,4 @@ script:
     - extrude_recipes requirements.yml
     # Packages are uploaded as they are built.
 
-    - if [[ -d recipes ]]; then conda build-all recipes --matrix-conditions "python $PYTHON_BUILD_RESTRICTIONS" "$NUMPY_BUILD_RESTRICTION"  --matrix-max-n-minor-versions 3 --inspect-channels conda-forge astropy $UPLOAD; fi
+    - if [[ -d recipes ]]; then conda build-all recipes --matrix-conditions "python $PYTHON_BUILD_RESTRICTIONS" $NUMPY_BUILD_RESTRICTION  --matrix-max-n-minor-versions 3 --inspect-channels conda-forge astropy $UPLOAD; fi
