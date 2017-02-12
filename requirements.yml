@@ -53,6 +53,7 @@
   version: 1.2.0
   setup_options: '--offline'
   numpy_compiled_extensions: false
+  python: '<3.6*'
 
 - name: wcsaxes
   version: '0.9'
