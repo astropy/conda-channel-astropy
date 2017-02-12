@@ -18,7 +18,7 @@ environment:
   # out support for the release.
 
   # If you do not want a numpy build restriction, set
-  NUMPY_BUILD_RESTRICTION=""
+  NUMPY_BUILD_RESTRICTION: ""
 
   BINSTAR_TOKEN:
     # Paste the security token for your destination conda channel here.
@@ -90,4 +90,4 @@ test_script:
     # Get ready to build.
     - "%CMD_IN_ENV% extrude_recipes requirements.yml"
     # Packages are uploaded as they are built.
-    - if exist recipes %CMD_IN_ENV% conda build-all recipes --matrix-conditions "python %PYTHON_BUILD_RESTRICTIONS%" "%NUMPY_BUILD_RESTRICTION%"  --matrix-max-n-minor-versions 3 --inspect-channels conda-forge astropy %UPLOAD%
+    - if exist recipes %CMD_IN_ENV% conda build-all recipes --matrix-conditions "python %PYTHON_BUILD_RESTRICTIONS%" %NUMPY_BUILD_RESTRICTION%  --matrix-max-n-minor-versions 3 --inspect-channels conda-forge astropy %UPLOAD%
