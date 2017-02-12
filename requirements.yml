@@ -142,6 +142,8 @@
   setup_options: '--offline'
   numpy_compiled_extensions: true
   python: '2.7*|>=3.5*'
+  excluded_platforms:
+      - 'osx-64'
 
 - name: astroplan
   version: '0.2'
