@@ -6,10 +6,17 @@
 - name: astropy-helpers
   version: 1.3.1
 
+- name: glueviz
+  # list only the name of packages that have conda-forge build, no version
+  # or other info required
+
 - name: astroquery
+
+# sncosmo has a recipe template
+- name: sncosmo
   # Version should match the version on PyPI. Versions that could be
   # interpereted as numbers (e.g. 0.1) should be enclosed in quotes.
-  version: 0.3.5
+  version: 1.5.0
 
   # conda builds disable downloading, but astropy-helpers is typically
   # configured to try to autoupdate during install of affiliated
@@ -21,19 +28,13 @@
   # must be set to true to ensure the package is built properly.
   # If in doubt, set it to true...though it should *always* be false
   # for a pure python package.
-  numpy_compiled_extensions: false   # Defaults to false if omitted.
+  numpy_compiled_extensions: true   # Defaults to false if omitted.
 
   # Some packages can only be built for specific versions of python but
   # setup.py often does not contain those restrictions (and conda skeleton
   # ignores it if present), so list restrictions on python version here.
 
   # python: '>2.6|>=3.4'  # if omitted, no restriction on python builds.
-
-# sncosmo has a recipe template
-- name: sncosmo
-  version: 1.5.0
-  setup_options: '--offline'
-  numpy_compiled_extensions: true
 
 - name: pydl
   version: 0.5.3
@@ -55,9 +56,6 @@
   python: '<3.6*'
 
 - name: wcsaxes
-  version: '0.9'
-  setup_options: '--offline'
-  numpy_compiled_extensions: false
 
 - name: gammapy
   version: '0.4'
@@ -112,7 +110,6 @@
   setup_options: '--offline'
   numpy_compiled_extensions: false
 
-# pyregion has a recipe template
 - name: pyregion
   version: 1.2
   setup_options: '--offline'
@@ -136,10 +133,6 @@
   numpy_compiled_extensions: false
 
 - name: reproject
-  version: '0.3.1'
-  setup_options: '--offline'
-  numpy_compiled_extensions: true
-  python: '2.7*|>=3.5*'
 
 - name: astroplan
   version: '0.2.1'
@@ -185,8 +178,6 @@
   setup_options: '--offline'
   include_extras: false
 
-- name: glueviz
-
 # cluster-lensing has a recipe template
 - name: cluster-lensing
   version: 0.1.2
@@ -212,21 +203,16 @@
   version: '6.3'
 
 # lmfit is required for omnifit
-# Testing whether this was the problem for #73
-#- name: lmfit
-#  version: '0.9.5'
+- name: lmfit
 
 - name: iminuit
   version: 1.2
 
 - name: emcee
-  version: 2.2.1
 
 - name: corner
-  version: 2.0.1
 
 - name: pytest-mpl
-  version: 0.7
 
 - name: pytest-arraydiff
   version: 0.1
