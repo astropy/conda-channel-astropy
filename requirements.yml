@@ -226,9 +226,9 @@
 - name: iminuit
   version: 1.2
 
-- name: emcee
-  version: 2.2.1
-  python: '<3.6*'
+#- name: emcee
+#  version: 2.2.1
+#  python: '<3.6*'
 
 - name: corner
   version: 2.0.1
