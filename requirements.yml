@@ -186,7 +186,7 @@
       - 'win-64'
 
 - name: regions
-  version: '0.1'
+  version: '0.2'
   setup_options: '--offline'
   include_extras: false
 
