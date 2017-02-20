@@ -62,7 +62,7 @@ install:
     - conda install conda-build
 
     # Install conda-build-all
-    - conda install conda-build-all
+    - conda install -c conda-forge conda-build-all=1.0.2
 
     # Finally, install extruder
     - conda install -c astropy extruder
