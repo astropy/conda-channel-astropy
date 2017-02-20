@@ -59,10 +59,10 @@ install:
     # downgrading conda itself from conda-forge.
     - conda config --add channels defaults
 
-    - conda install conda-build=2.0.10
+    - conda install conda-build
 
     # Install conda-build-all
-    - conda install conda-build-all=1.0*
+    - conda install conda-build-all
 
     # Finally, install extruder
     - conda install -c astropy extruder
