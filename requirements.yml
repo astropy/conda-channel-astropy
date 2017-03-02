@@ -74,7 +74,7 @@
 #   numpy_compiled_extensions: false
 
 - name: photutils
-  version: '0.3'
+  version: '0.3.1'
   setup_options: '--offline'
   numpy_compiled_extensions: false
 
