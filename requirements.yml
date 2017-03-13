@@ -136,15 +136,11 @@
   setup_options: '--offline'
   numpy_compiled_extensions: false
 
-# reproject has a recipe template
-#- name: reproject
-#  version: '0.3.1'
-#  setup_options: '--offline'
-#  numpy_compiled_extensions: true
-#  python: '2.7*|>=3.5*'
-#  excluded_platforms:
-#      - 'osx-64'
-#      - 'win-64'
+- name: reproject
+  version: '0.3.1'
+  setup_options: '--offline'
+  numpy_compiled_extensions: true
+  python: '2.7*|>=3.5*'
 
 - name: astroplan
   version: '0.2'
