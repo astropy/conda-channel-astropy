@@ -31,7 +31,7 @@ env:
         - CONDA_NPY="1.12"
         - CONDA_VERSION=4.2*
         # the python version restriction above overrides this broader setting.
-        - MAX_N_MINOR_VERSIONS="4"
+        - MAX_N_MINOR_VERSIONS="2"
 
 # Matrix is fully specified (for now) by os versions
 
@@ -83,4 +83,4 @@ script:
     - extrude_recipes requirements.yml
     # Packages are uploaded as they are built.
 
-    - if [[ -d recipes ]]; then conda build-all recipes --matrix-conditions "python $PYTHON_BUILD_RESTRICTIONS" $NUMPY_BUILD_RESTRICTION  --matrix-max-n-minor-versions 3 --inspect-channels conda-forge astropy $UPLOAD; fi
+    - if [[ -d recipes ]]; then conda build-all recipes --matrix-conditions "python $PYTHON_BUILD_RESTRICTIONS" $NUMPY_BUILD_RESTRICTION  --matrix-max-n-minor-versions $MAX_N_MINOR_VERSIONS --inspect-channels conda-forge astropy $UPLOAD; fi
