@@ -18,7 +18,7 @@ env:
         # The python build restriction MUST be set at the moment, though it
         # can have any value. The setting below avoids known-bad builds on
         # python 2.6 and 3.3 for some packages.
-        - PYTHON_BUILD_RESTRICTIONS="2.7*|>=3.4"
+        - PYTHON_BUILD_RESTRICTIONS="2.7*|>=3.5"
         # If you want to restrict the numpy version beyond what is in the
         # individual package requirements, do that here. Can be helpful after
         # a new numpy release while continuum and conda-forge are still building

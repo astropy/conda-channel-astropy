@@ -11,7 +11,7 @@ environment:
   CMD_IN_ENV: cmd /E:ON /V:ON /C Obvious-CI\scripts\obvci_appveyor_python_build_env.cmd
   # Python version restrictions that should apply to all builds regardless
   # of any package-specific version restrictions
-  PYTHON_BUILD_RESTRICTIONS: "2.7*|>=3.4"
+  PYTHON_BUILD_RESTRICTIONS: "2.7*|>=3.5"
   # If you want to restrict the numpy version beyond what is in the
   # individual package requirements, do that here. Can be helpful after
   # a new numpy release while continuum and conda-forge are still building
