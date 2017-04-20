@@ -31,10 +31,9 @@
 
 # sncosmo has a recipe template
 - name: sncosmo
-  version: 1.4.0
+  version: 1.5.0
   setup_options: '--offline'
-  numpy_compiled_extensions: false
-  python: '<3.6*'
+  numpy_compiled_extensions: true
 
 - name: pydl
   version: 0.5.3
@@ -187,7 +186,6 @@
   include_extras: false
 
 - name: glueviz
-  version: '0.10.2'
 
 # cluster-lensing has a recipe template
 - name: cluster-lensing
@@ -235,9 +233,4 @@
 - name: pytest-arraydiff
   version: 0.1
 
-# There are some numpy 1.10 & python 3.6 issues on osx that fails the build of
-# extinction, temporarily exclude that platform
 - name: extinction
-  version: 0.3.0
-  excluded_platforms:
-      - 'osx-64'
