@@ -60,10 +60,9 @@
   numpy_compiled_extensions: false
 
 - name: gammapy
-  version: '0.4'
+  version: '0.5'
   setup_options: '--offline'
   numpy_compiled_extensions: false
-  python: '<3.5.2'
   include_extras: false
 
 # Fails because its astropy helpers is ancient/tries to import astropy???
