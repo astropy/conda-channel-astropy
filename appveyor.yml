@@ -64,7 +64,7 @@ install:
     - cmd: conda config --add channels astropy
     - cmd: conda config --add channels astropy-ci-extras
     - cmd: conda config --add channels conda-forge
-    - cmd: conda install conda-build=2.0.10
+    - cmd: conda install conda-build=2
     - cmd: conda install --quiet astropy anaconda-client jinja2 cython
     # These installs are needed on windows but not other platforms.
     - cmd: conda install patch psutil
