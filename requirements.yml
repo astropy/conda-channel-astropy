@@ -37,7 +37,7 @@
   # python: '>2.6|>=3.4'  # if omitted, no restriction on python builds.
 
 - name: pydl
-  version: 0.5.3
+  version: 0.5.4
   setup_options: '--offline'
   numpy_compiled_extensions: false
 
