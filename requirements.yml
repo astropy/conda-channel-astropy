@@ -16,7 +16,7 @@
 - name: sncosmo
   # Version should match the version on PyPI. Versions that could be
   # interpereted as numbers (e.g. 0.1) should be enclosed in quotes.
-  version: 1.5.0
+  version: 1.5.1
 
   # conda builds disable downloading, but astropy-helpers is typically
   # configured to try to autoupdate during install of affiliated
