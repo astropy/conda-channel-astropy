@@ -68,7 +68,7 @@
   include_extras: false
 
 - name: pyvo
-  version: 0.5.2
+  version: 0.6.0
   setup_options: '--offline'
   numpy_compiled_extensions: false
 
