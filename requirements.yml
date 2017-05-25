@@ -62,11 +62,10 @@
   numpy_compiled_extensions: false
   include_extras: false
 
-# Fails because its astropy helpers is ancient/tries to import astropy???
-# - name: pyvo
-#   version: 0.0beta2
-#   setup_options: '--offline'
-#   numpy_compiled_extensions: false
+- name: pyvo
+  version: 0.6.0
+  setup_options: '--offline'
+  numpy_compiled_extensions: false
 
 - name: photutils
   version: '0.3.2'
