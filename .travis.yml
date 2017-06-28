@@ -11,6 +11,7 @@ env:
         - DESTINATION_CONDA_CHANNEL="astropy"
         - TARGET_ARCH="x64"
         - CONDA_INSTALL_LOCN="${HOME}/miniconda"
+        - PACKAGES_TO_COPY="copy_me.yaml"
 
         # Defines BINSTAR_TOKEN for your binstar channel
         - secure: "1Y5eKpseYF3aOZ97RfAZ/hykoK0xxG03Bv0Zxvnez3VPpF8AJM7vCWvuvSXYOqlSH2AqHtuLEMSsjkdIXrcyZ1FLGCXcTtY+2kT3QUxLXTvCCCStX4oodOGIgA/A973rjBcQNCFyHauvgivDE5ENUYUDU8bqBZbx0vOlCJC74dyFkTSklNpHTpM3pUh9rIjbhw603UBtVySLmk4X9sS/yf03Al9FEeT3q+jGQKYwT+VhXKakywlzWeoE/Y8PlrVkxdgzq3ktfXme+W8LzFTzY4gzgdHSTPj/A7SHHRkODnJxiW2iYKbDVp3ouBlYN+tq+Km1IA9Qo6wYdoYrHVh6w2F3L+2dr5qabtW6X4T0bulxA7pr2KgtDPpgfvmleIifaGlLe8hKUodQKZeQMiqy4zLUnk4KOmzq5HcRO+Mjn8c2uiPjU9P7aUy9gWrJHxd0uTrecrNHrqCpz3yepf+fpfIjo16iqB0Ck1JsjIg/cekQBRVFagZfSdIhg7f5B7Dq44sbYAmxLjaNgh6ArTmGkImPjJtqY5bllMHzp0r6IdnKswBYmafO2lZjqHWBP6mtvtJC1tWBBFezWPG/jRbqHM98J3UtGVVKKsHiseX97Z4il9mb0SvLDtwEf0ZyMZnSxhHt5wbPV5X+LxTSSjjztb38/BAN3ZwxaRxftKyeuIY="
@@ -81,6 +82,16 @@ script:
       fi
     # Get ready to build.
     - extrude_recipes requirements.yml
+    # If there are packages to copy, do that first, but only if UPLOAD is set,
+    # and only on Linux, since those travis machines are fastest. Copy only
+    # needs to happen once to copy all available builds.
+    - if [ -e $PACKAGES_TO_COPY ] && [ $TRAVIS_OS_NAME == "linux" ]; then
+        echo "Will potentially copy these packages when merged:";
+        cat $PACKAGES_TO_COPY;
+        if [ ! -z $UPLOAD ]; then
+          copy_packages $PACKAGES_TO_COPY $DESTINATION_CONDA_CHANNEL;
+        fi
+      fi
     # Packages are uploaded as they are built.
 
     - if [[ -d recipes ]]; then conda build-all recipes --matrix-conditions "python $PYTHON_BUILD_RESTRICTIONS" $NUMPY_BUILD_RESTRICTION  --matrix-max-n-minor-versions $MAX_N_MINOR_VERSIONS --inspect-channels conda-forge astropy $UPLOAD; fi
