@@ -88,7 +88,7 @@ script:
     - if [ -e $PACKAGES_TO_COPY ] && [ $TRAVIS_OS_NAME == "linux" ]; then
         echo "Will potentially copy these packages when merged:";
         cat $PACKAGES_TO_COPY;
-        if [ ! -z $UPLOAD ]; then
+        if [ ! -z "$UPLOAD" ]; then
           copy_packages $PACKAGES_TO_COPY $DESTINATION_CONDA_CHANNEL;
         fi
       fi
