@@ -7,7 +7,7 @@ environment:
   # File with list of packages to potentially copy from conda-forge.
   # At the moment, copying is NOT done here because doing it on
   # one platform copies everything.
-  PACKAGES_TO_COPY: "copy_me.yaml"
+  PACKAGES_TO_COPY: "copy_from.yaml"
 
   # Appveyor machines come with miniconda already installed.
   CONDA_INSTALL_LOCN: "C:\\Miniconda3-x64"
