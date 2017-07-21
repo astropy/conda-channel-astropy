@@ -44,8 +44,8 @@ install:
     - export PATH=${CONDA_INSTALL_LOCN}/bin:$PATH
     - conda config --set always_yes true
 
-    - PIN_FILE_CONDA=${CONDA_INSTALL_LOCN}/conda-meta/pinned
-    - echo "conda ${CONDA_VERSION}" > $PIN_FILE_CONDA
+    # - PIN_FILE_CONDA=${CONDA_INSTALL_LOCN}/conda-meta/pinned
+    # - echo "conda ${CONDA_VERSION}" > $PIN_FILE_CONDA
 
     - conda update --quiet conda
 
