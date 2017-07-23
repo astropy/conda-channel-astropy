@@ -12,29 +12,29 @@
 
 - name: astroquery
 
-# sncosmo has a recipe template
 - name: sncosmo
-  # Version should match the version on PyPI. Versions that could be
-  # interpereted as numbers (e.g. 0.1) should be enclosed in quotes.
-  version: 1.5.1
 
-  # conda builds disable downloading, but astropy-helpers is typically
-  # configured to try to autoupdate during install of affiliated
-  # packages. Set to true if the package uses astropy-helpers and
-  # auto-update and the --offline flag will be passed to setup.py.
-  setup_options: '--offline'   # Defaults to false if omitted.
+  # # Version should match the version on PyPI. Versions that could be
+  # # interpereted as numbers (e.g. 0.1) should be enclosed in quotes.
+  # version: 1.5.1
 
-  # If the package contains compiled extensions that link to numpy this
-  # must be set to true to ensure the package is built properly.
-  # If in doubt, set it to true...though it should *always* be false
-  # for a pure python package.
-  numpy_compiled_extensions: true   # Defaults to false if omitted.
+  # # conda builds disable downloading, but astropy-helpers is typically
+  # # configured to try to autoupdate during install of affiliated
+  # # packages. Set to true if the package uses astropy-helpers and
+  # # auto-update and the --offline flag will be passed to setup.py.
+  # setup_options: '--offline'   # Defaults to false if omitted.
 
-  # Some packages can only be built for specific versions of python but
-  # setup.py often does not contain those restrictions (and conda skeleton
-  # ignores it if present), so list restrictions on python version here.
+  # # If the package contains compiled extensions that link to numpy this
+  # # must be set to true to ensure the package is built properly.
+  # # If in doubt, set it to true...though it should *always* be false
+  # # for a pure python package.
+  # numpy_compiled_extensions: true   # Defaults to false if omitted.
 
-  # python: '>2.6|>=3.4'  # if omitted, no restriction on python builds.
+  # # Some packages can only be built for specific versions of python but
+  # # setup.py often does not contain those restrictions (and conda skeleton
+  # # ignores it if present), so list restrictions on python version here.
+
+  # # python: '>2.6|>=3.4'  # if omitted, no restriction on python builds.
 
 - name: pydl
   version: 0.5.4
@@ -72,13 +72,13 @@
   setup_options: '--offline'
   numpy_compiled_extensions: false
 
-- name: spherical-geometry
-  version: 1.0.6
-  setup_options: '--offline'
-  numpy_compiled_extensions: false
-  python: '<3.5.2'
-  excluded_platforms:
-      - 'win-64'
+# - name: spherical-geometry
+#   version: 1.0.6
+#   setup_options: '--offline'
+#   numpy_compiled_extensions: false
+#   python: '<3.5.2'
+#   excluded_platforms:
+#       - 'win-64'
 
 # APLpy currently has a recipe template
 - name: APLpy
@@ -118,10 +118,6 @@
   python: '>=2.6|>=3.3'
 
 - name: ginga
-  version: 2.6.4
-  numpy_compiled_extensions: false
-  python: '>2.6'
-  setup_options: '--offline'
 
 # naima has a recipe template
 - name: naima
@@ -141,11 +137,7 @@
 - name: python-cpl
   version: '0.7.2'
 
-# astroscrappy has a recipe template
 - name: astroscrappy
-  version: '1.0.5'
-  setup_options: '--offline'
-  numpy_compiled_extensions: true
 
 - name: omnifit
   version: '0.2.1'
