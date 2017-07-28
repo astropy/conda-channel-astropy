@@ -72,13 +72,12 @@
   setup_options: '--offline'
   numpy_compiled_extensions: false
 
-# - name: spherical-geometry
-#   version: 1.0.6
-#   setup_options: '--offline'
-#   numpy_compiled_extensions: false
-#   python: '<3.5.2'
-#   excluded_platforms:
-#       - 'win-64'
+- name: spherical-geometry
+  version: 1.0.11
+  setup_options: '--offline'
+  numpy_compiled_extensions: false
+  excluded_platforms:
+      - 'win-64'
 
 # APLpy currently has a recipe template
 - name: APLpy
