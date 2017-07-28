@@ -174,7 +174,7 @@
       - 'win-64'
 
 - name: astro-gala
-  version: '0.2'
+  version: '0.2.1'
   setup_options: '--offline'
   excluded_platforms:
       - 'win-64'
