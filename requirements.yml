@@ -4,7 +4,7 @@
 
 # astropy-helpers has a recipe template
 - name: astropy-helpers
-  version: 2.0
+  version: 2.0.1
 
 - name: glueviz
   # list only the name of packages that have conda-forge build, no version
