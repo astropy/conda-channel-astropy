@@ -50,9 +50,6 @@
 
 # ccdproc has a recipe template
 - name: ccdproc
-  version: 1.2.0
-  setup_options: '--offline'
-  numpy_compiled_extensions: false
 
 - name: wcsaxes
 
@@ -63,14 +60,8 @@
   include_extras: false
 
 - name: pyvo
-  version: 0.6.0
-  setup_options: '--offline'
-  numpy_compiled_extensions: false
 
 - name: photutils
-  version: '0.3.2'
-  setup_options: '--offline'
-  numpy_compiled_extensions: false
 
 # - name: spherical-geometry
 #   version: 1.0.6
@@ -174,10 +165,6 @@
       - 'win-64'
 
 - name: astro-gala
-  version: '0.2'
-  setup_options: '--offline'
-  excluded_platforms:
-      - 'win-64'
 
 ################################################################
 # These are additional dependencies of some of the affiliated  #
