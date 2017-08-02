@@ -71,10 +71,7 @@
 #   excluded_platforms:
 #       - 'win-64'
 
-# APLpy currently has a recipe template
 - name: APLpy
-  version: '1.1.1'
-  setup_options: '--offline'
 
 - name: specutils
   version: '0.2.2'
@@ -119,10 +116,6 @@
 - name: reproject
 
 - name: astroplan
-  version: '0.2.1'
-  setup_options: '--offline'
-  numpy_compiled_extensions: false
-  include_extras: true
 
 # python-cpl has a recipe template for now
 - name: python-cpl
