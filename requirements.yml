@@ -166,6 +166,8 @@
 
 - name: astro-gala
 
+- name: galpy
+
 ################################################################
 # These are additional dependencies of some of the affiliated  #
 # packages we build above                                      #
