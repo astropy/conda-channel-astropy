@@ -54,10 +54,6 @@
 - name: wcsaxes
 
 - name: gammapy
-  version: '0.6'
-  setup_options: '--offline'
-  numpy_compiled_extensions: false
-  include_extras: false
 
 - name: pyvo
 
