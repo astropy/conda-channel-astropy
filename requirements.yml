@@ -50,9 +50,6 @@
 
 # ccdproc has a recipe template
 - name: ccdproc
-  version: 1.2.0
-  setup_options: '--offline'
-  numpy_compiled_extensions: false
 
 - name: wcsaxes
 
@@ -63,27 +60,12 @@
   include_extras: false
 
 - name: pyvo
-  version: 0.6.0
-  setup_options: '--offline'
-  numpy_compiled_extensions: false
 
 - name: photutils
-  version: '0.3.2'
-  setup_options: '--offline'
-  numpy_compiled_extensions: false
 
-# - name: spherical-geometry
-#   version: 1.0.6
-#   setup_options: '--offline'
-#   numpy_compiled_extensions: false
-#   python: '<3.5.2'
-#   excluded_platforms:
-#       - 'win-64'
+- name: spherical-geometry
 
-# APLpy currently has a recipe template
 - name: APLpy
-  version: '1.1.1'
-  setup_options: '--offline'
 
 - name: specutils
   version: '0.2.2'
@@ -128,10 +110,6 @@
 - name: reproject
 
 - name: astroplan
-  version: '0.2.1'
-  setup_options: '--offline'
-  numpy_compiled_extensions: false
-  include_extras: true
 
 # python-cpl has a recipe template for now
 - name: python-cpl
@@ -174,10 +152,8 @@
       - 'win-64'
 
 - name: astro-gala
-  version: '0.2'
-  setup_options: '--offline'
-  excluded_platforms:
-      - 'win-64'
+
+- name: galpy
 
 ################################################################
 # These are additional dependencies of some of the affiliated  #
