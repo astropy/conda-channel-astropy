@@ -45,7 +45,6 @@
   numpy_compiled_extensions: false
   python: '<3.6*'
 
-# ccdproc has a recipe template
 - name: ccdproc
 
 - name: wcsaxes
@@ -61,28 +60,16 @@
 - name: APLpy
 
 - name: specutils
-  version: '0.2.2'
-  setup_options: '--offline'
-  numpy_compiled_extensions: false
 
 - name: imexam
 
 - name: gwcs
-  version: 0.7
-  setup_options: '--offline'
-  numpy_compiled_extensions: false
 
 - name: asdf
 
 - name: pyregion
-  version: 1.2
-  setup_options: '--offline'
-  numpy_compiled_extensions: true
 
-# astroML has a recipe template
 - name: astroML
-  version: '0.3'
-  python: '>=2.6|>=3.3'
 
 - name: ginga
 
@@ -115,15 +102,8 @@
   python: '<3.5.2'
 
 - name: spectral-cube
-  version: '0.4.0'
-  setup_options: '--offline'
 
 - name: halotools
-  version: '0.5'
-  setup_options: '--offline'
-  python: '>=2.7'
-  excluded_platforms:
-      - 'win-64'
 
 - name: regions
 
@@ -143,8 +123,6 @@
 ################################################################
 
 - name: pyephem
-  version: 3.7.6.0
-  python: '<3.6*'
 
 - name: hgtools
   version: '6.3'
@@ -153,7 +131,6 @@
 - name: lmfit
 
 - name: iminuit
-  version: 1.2
 
 - name: emcee
 
