@@ -73,33 +73,19 @@
 
 - name: ginga
 
-# naima has a recipe template
 - name: naima
-  version: '0.8'
-  setup_options: '--offline'
-  numpy_compiled_extensions: false
 
 - name: reproject
 
 - name: astroplan
 
-# python-cpl has a recipe template for now
 - name: python-cpl
-  version: '0.7.2'
 
 - name: astroscrappy
 
 - name: omnifit
-  version: '0.2.1'
-  setup_options: '--offline'
-  python: '<3.5.2'
 
-# maltpynt does not seem to actually update astropy_helpers during setup.
 - name: maltpynt
-  version: '2.0'
-  setup_options: '--offline'
-  numpy_compiled_extensions: false
-  python: '<3.5.2'
 
 - name: spectral-cube
 
@@ -107,11 +93,7 @@
 
 - name: regions
 
-# cluster-lensing has a recipe template
 - name: cluster-lensing
-  version: 0.1.2
-  excluded_platforms:
-      - 'win-64'
 
 - name: astro-gala
 
