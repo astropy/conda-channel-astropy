@@ -37,9 +37,6 @@
   # # python: '>2.6|>=3.4'  # if omitted, no restriction on python builds.
 
 - name: pydl
-  version: 0.5.4
-  setup_options: '--offline'
-  numpy_compiled_extensions: false
 
 # montage-wrapper has a recipe template
 - name: montage-wrapper
@@ -48,16 +45,11 @@
   numpy_compiled_extensions: false
   python: '<3.6*'
 
-# ccdproc has a recipe template
 - name: ccdproc
 
 - name: wcsaxes
 
 - name: gammapy
-  version: '0.6'
-  setup_options: '--offline'
-  numpy_compiled_extensions: false
-  include_extras: false
 
 - name: pyvo
 
@@ -68,88 +60,40 @@
 - name: APLpy
 
 - name: specutils
-  version: '0.2.2'
-  setup_options: '--offline'
-  numpy_compiled_extensions: false
 
-# imexam has a recipe template
 - name: imexam
-  version: 0.7.1
-  setup_options: '--offline'
-  numpy_compiled_extensions: false
 
 - name: gwcs
-  version: 0.7
-  setup_options: '--offline'
-  numpy_compiled_extensions: false
 
-# asdf has a recipe template
 - name: asdf
-  version: 1.2.1
-  setup_options: '--offline'
-  numpy_compiled_extensions: false
 
 - name: pyregion
-  version: 1.2
-  setup_options: '--offline'
-  numpy_compiled_extensions: true
 
-# astroML has a recipe template
 - name: astroML
-  version: '0.3'
-  python: '>=2.6|>=3.3'
 
 - name: ginga
 
-# naima has a recipe template
 - name: naima
-  version: '0.8'
-  setup_options: '--offline'
-  numpy_compiled_extensions: false
 
 - name: reproject
 
 - name: astroplan
 
-# python-cpl has a recipe template for now
 - name: python-cpl
-  version: '0.7.2'
 
 - name: astroscrappy
 
 - name: omnifit
-  version: '0.2.1'
-  setup_options: '--offline'
-  python: '<3.5.2'
 
-# maltpynt does not seem to actually update astropy_helpers during setup.
 - name: maltpynt
-  version: '2.0'
-  setup_options: '--offline'
-  numpy_compiled_extensions: false
-  python: '<3.5.2'
 
 - name: spectral-cube
-  version: '0.4.0'
-  setup_options: '--offline'
 
 - name: halotools
-  version: '0.5'
-  setup_options: '--offline'
-  python: '>=2.7'
-  excluded_platforms:
-      - 'win-64'
 
 - name: regions
-  version: '0.2'
-  setup_options: '--offline'
-  include_extras: false
 
-# cluster-lensing has a recipe template
 - name: cluster-lensing
-  version: 0.1.2
-  excluded_platforms:
-      - 'win-64'
 
 - name: astro-gala
 
@@ -161,8 +105,6 @@
 ################################################################
 
 - name: pyephem
-  version: 3.7.6.0
-  python: '<3.6*'
 
 - name: hgtools
   version: '6.3'
@@ -171,7 +113,6 @@
 - name: lmfit
 
 - name: iminuit
-  version: 1.2
 
 - name: emcee
 
