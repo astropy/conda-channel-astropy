@@ -40,10 +40,9 @@
 
 # montage-wrapper has a recipe template
 - name: montage-wrapper
-  version: 0.9.8
+  version: 0.9.9
   setup_options: '--offline'
   numpy_compiled_extensions: false
-  python: '<3.6*'
 
 - name: ccdproc
 
