@@ -30,7 +30,8 @@ env:
 
         # The value below needs to be set but will be ignored.
         - CONDA_NPY="1.12"
-        - CONDA_VERSION=4.2*
+        # Pin conda version below
+        - CONDA_VERSION=4.3
         # the python version restriction above overrides this broader setting.
         - MAX_N_MINOR_VERSIONS="2"
 
@@ -67,6 +68,9 @@ install:
 
     # Finally, install extruder
     - conda install -c astropy extruder
+
+    # Make sure conda version is what we want
+    - conda install conda=$CONDA_VERSION
 
     # To ease debugging, list installed packages
     - conda info -a
