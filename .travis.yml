@@ -30,8 +30,10 @@ env:
 
         # The value below needs to be set but will be ignored.
         - CONDA_NPY="1.12"
-        # Pin conda version below
+        # Pin conda and conda build version below
         - CONDA_VERSION=4.3
+        - CONDA_BUILD_VERSION=2
+        
         # the python version restriction above overrides this broader setting.
         - MAX_N_MINOR_VERSIONS="2"
 
@@ -61,7 +63,7 @@ install:
     # downgrading conda itself from conda-forge.
     - conda config --add channels defaults
 
-    - conda install conda-build=2
+    - conda install conda-build=$CONDA_BUILD_VERSION
 
     # Install conda-build-all
     - conda install -c conda-forge conda-build-all
@@ -69,8 +71,9 @@ install:
     # Finally, install extruder
     - conda install -c astropy extruder
 
-    # Make sure conda version is what we want
-    - conda install conda=$CONDA_VERSION
+    # Make sure conda version and conda build version is what we want 
+    # Do this last in case updates above have changed version
+    - conda install conda=$CONDA_VERSION conda-build=$CONDA_BUILD_VERSION
 
     # To ease debugging, list installed packages
     - conda info -a
