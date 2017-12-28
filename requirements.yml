@@ -106,9 +106,6 @@
 
 - name: pyephem
 
-- name: hgtools
-  version: '6.3'
-
 # lmfit is required for omnifit
 - name: lmfit
 
