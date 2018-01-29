@@ -99,6 +99,8 @@
 
 - name: galpy
 
+- name: hips
+
 ################################################################
 # These are additional dependencies of some of the affiliated  #
 # packages we build above                                      #
