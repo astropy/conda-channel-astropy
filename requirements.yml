@@ -6,6 +6,9 @@
 - name: astropy-helpers
   version: 2.0
 
+# We also have astropy in this channel
+- name: astropy
+
 - name: glueviz
   # list only the name of packages that have conda-forge build, no version
   # or other info required
