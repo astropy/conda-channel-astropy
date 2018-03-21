@@ -2,10 +2,6 @@
 # Affiliated packages                                          #
 ################################################################
 
-# astropy-helpers has a recipe template
-- name: astropy-helpers
-  version: 2.0
-
 # We also have astropy in this channel
 - name: astropy
 
@@ -103,6 +99,28 @@
 - name: galpy
 
 - name: hips
+
+################################################################
+# Infrastructure packages                                      #
+################################################################
+
+# astropy-helpers has a recipe template
+- name: astropy-helpers
+  version: 2.0
+
+- name: pytest-astropy
+
+- name: pytest-openfiles
+
+- name: pytest-doctestplus
+
+- name: pytest-remotedata
+
+- name: sphinx-astropy
+
+- name: sphinx-automodapi
+
+- name: astropy-sphinx-theme
 
 ################################################################
 # These are additional dependencies of some of the affiliated  #
