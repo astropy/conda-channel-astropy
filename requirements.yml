@@ -9,6 +9,8 @@
   # list only the name of packages that have conda-forge build, no version
   # or other info required
 
+- name: astropy-healpix
+
 - name: astroquery
 
 - name: sncosmo
