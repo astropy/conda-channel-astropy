@@ -5,6 +5,24 @@
 # We also have astropy in this channel
 - name: astropy
 
+# Also explicitly mention LTS versions of astropy as they would not be
+# automatically copied over otherwise.
+
+- name: astropy
+  version: 2.0.5
+
+- name: astropy
+  version: 2.0.6
+
+- name: astropy
+  version: 2.0.7
+
+- name: astropy
+  version: 2.0.8
+
+- name: astropy
+  version: 2.0.9
+
 - name: glueviz
   # list only the name of packages that have conda-forge build, no version
   # or other info required
