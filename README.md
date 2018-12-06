@@ -34,3 +34,20 @@ Check out the
 [home page for the builder](https://github.com/astropy/conda-build-tools)
 for a description of the permitted fields in `requirements.yml` and a sample recipe template.
 
+## In case of emergency, copy manually
+
+First install `anaconda-client`. Once you have done that, use it to log in to anaconda at
+the command line:
+
+```
+$ anaconda login
+```
+
+Once you are logged in you can do the copy from the command line:
+
+```
+$ anaconda copy --to-owner astropy conda-forge/astroquery/0.3.9
+```
+
+If you want to copy just one specific file from conda-forge add its name after
+the version number. See `anaconda copy --help` for details.
