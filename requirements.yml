@@ -57,13 +57,6 @@
 
 - name: pydl
 
-# montage-wrapper has a recipe template
-- name: montage-wrapper
-  version: 0.9.8
-  setup_options: '--offline'
-  numpy_compiled_extensions: false
-  python: '<3.6*'
-
 - name: ccdproc
 
 - name: wcsaxes
@@ -124,10 +117,6 @@
 # Infrastructure packages                                      #
 ################################################################
 
-# astropy-helpers has a recipe template
-- name: astropy-helpers
-  version: 2.0
-
 - name: pytest-astropy
 
 - name: pytest-openfiles
@@ -161,7 +150,6 @@
 - name: pytest-mpl
 
 - name: pytest-arraydiff
-  version: 0.1
 
 - name: extinction
 
