@@ -5,24 +5,6 @@
 # We also have astropy in this channel
 - name: astropy
 
-# Also explicitly mention LTS versions of astropy as they would not be
-# automatically copied over otherwise.
-
-- name: astropy
-  version: 2.0.5
-
-- name: astropy
-  version: 2.0.6
-
-- name: astropy
-  version: 2.0.7
-
-- name: astropy
-  version: 2.0.8
-
-- name: astropy
-  version: 2.0.9
-
 - name: glueviz
   # list only the name of packages that have conda-forge build, no version
   # or other info required
@@ -56,13 +38,6 @@
   # # python: '>2.6|>=3.4'  # if omitted, no restriction on python builds.
 
 - name: pydl
-
-# montage-wrapper has a recipe template
-- name: montage-wrapper
-  version: 0.9.8
-  setup_options: '--offline'
-  numpy_compiled_extensions: false
-  python: '<3.6*'
 
 - name: ccdproc
 
@@ -124,10 +99,6 @@
 # Infrastructure packages                                      #
 ################################################################
 
-# astropy-helpers has a recipe template
-- name: astropy-helpers
-  version: 2.0
-
 - name: pytest-astropy
 
 - name: pytest-openfiles
@@ -161,7 +132,6 @@
 - name: pytest-mpl
 
 - name: pytest-arraydiff
-  version: 0.1
 
 - name: extinction
 
