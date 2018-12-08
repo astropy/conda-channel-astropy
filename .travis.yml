@@ -4,7 +4,6 @@ language: c
 
 os:
   - linux
-  - osx
 
 env:
     global:
@@ -33,7 +32,7 @@ env:
         # Pin conda and conda build version below
         - CONDA_VERSION=4.3
         - CONDA_BUILD_VERSION=2
-        
+
         # the python version restriction above overrides this broader setting.
         - MAX_N_MINOR_VERSIONS="2"
 
@@ -71,7 +70,7 @@ install:
     # Finally, install extruder
     - conda install -c astropy extruder
 
-    # Make sure conda version and conda build version is what we want 
+    # Make sure conda version and conda build version is what we want
     # Do this last in case updates above have changed version
     - conda install conda=$CONDA_VERSION conda-build=$CONDA_BUILD_VERSION
 
