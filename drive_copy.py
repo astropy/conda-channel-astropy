@@ -15,8 +15,6 @@ def main(requirements_path):
 
     token = os.getenv('BINSTAR_TOKEN')
 
-    print('token is', token)
-
     for package in package_list:
         print(package['name'])
         try:
