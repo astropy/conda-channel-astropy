@@ -1,6 +1,6 @@
 import os
 
-from ruamel import yaml
+import yaml
 from binstar_client import Conflict
 
 from sync import sync

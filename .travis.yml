@@ -9,7 +9,7 @@ sudo: false
 
 env:
     global:
-        - CONDA_DEPENDENCIES='anaconda-client ruaml.yaml'
+        - CONDA_DEPENDENCIES='anaconda-client pyyaml'
 
         # Defines BINSTAR_TOKEN for your binstar channel
         - secure: "1Y5eKpseYF3aOZ97RfAZ/hykoK0xxG03Bv0Zxvnez3VPpF8AJM7vCWvuvSXYOqlSH2AqHtuLEMSsjkdIXrcyZ1FLGCXcTtY+2kT3QUxLXTvCCCStX4oodOGIgA/A973rjBcQNCFyHauvgivDE5ENUYUDU8bqBZbx0vOlCJC74dyFkTSklNpHTpM3pUh9rIjbhw603UBtVySLmk4X9sS/yf03Al9FEeT3q+jGQKYwT+VhXKakywlzWeoE/Y8PlrVkxdgzq3ktfXme+W8LzFTzY4gzgdHSTPj/A7SHHRkODnJxiW2iYKbDVp3ouBlYN+tq+Km1IA9Qo6wYdoYrHVh6w2F3L+2dr5qabtW6X4T0bulxA7pr2KgtDPpgfvmleIifaGlLe8hKUodQKZeQMiqy4zLUnk4KOmzq5HcRO+Mjn8c2uiPjU9P7aUy9gWrJHxd0uTrecrNHrqCpz3yepf+fpfIjo16iqB0Ck1JsjIg/cekQBRVFagZfSdIhg7f5B7Dq44sbYAmxLjaNgh6ArTmGkImPjJtqY5bllMHzp0r6IdnKswBYmafO2lZjqHWBP6mtvtJC1tWBBFezWPG/jRbqHM98J3UtGVVKKsHiseX97Z4il9mb0SvLDtwEf0ZyMZnSxhHt5wbPV5X+LxTSSjjztb38/BAN3ZwxaRxftKyeuIY="
