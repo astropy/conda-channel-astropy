@@ -53,6 +53,8 @@
 
 - name: APLpy
 
+- name: pyavm
+
 - name: specutils
 
 - name: imexam
