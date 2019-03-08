@@ -97,6 +97,12 @@
 
 - name: hips
 
+- name: dust_extinction
+
+- name: hendrics
+
+- name: stingray
+
 ################################################################
 # Infrastructure packages                                      #
 ################################################################
