@@ -105,6 +105,14 @@
 
 - name: baseband
 
+- name: corral-pipeline
+
+- name: pypseckit
+
+- name: synphot
+
+- name: linetools
+
 ################################################################
 # Infrastructure packages                                      #
 ################################################################
@@ -146,3 +154,9 @@
 - name: extinction
 
 - name: poliastro
+
+# sadisplay is required for corral-pipeline
+- name: sadisplay
+
+# sphinx-gallery is required for sphinx-astropy
+- name: sphinx-gallery
