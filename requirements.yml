@@ -107,7 +107,7 @@
 
 - name: corral-pipeline
 
-- name: pypseckit
+- name: pyspeckit
 
 - name: synphot
 
