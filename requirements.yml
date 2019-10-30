@@ -125,6 +125,8 @@
 
 - name: pytest-remotedata
 
+- name: pytest-astropy-header
+
 - name: sphinx-astropy
 
 - name: sphinx-automodapi
