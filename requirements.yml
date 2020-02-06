@@ -162,3 +162,7 @@
 
 # sphinx-gallery is required for sphinx-astropy
 - name: sphinx-gallery
+
+# dependency of pyvo
+- name: python-mimeparse
+
