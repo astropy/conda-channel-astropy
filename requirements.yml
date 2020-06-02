@@ -133,6 +133,8 @@
 
 - name: astropy-sphinx-theme
 
+- name: pyerfa
+
 ################################################################
 # These are additional dependencies of some of the affiliated  #
 # packages we build above                                      #
