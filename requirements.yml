@@ -168,3 +168,6 @@
 # dependency of pyvo
 - name: python-mimeparse
 
+# test dependency for astropy
+- name: jplephem
+
