@@ -127,6 +127,8 @@
 
 - name: pytest-astropy-header
 
+- name: pytest-filter-subpackage
+
 - name: sphinx-astropy
 
 - name: sphinx-automodapi
