@@ -113,6 +113,17 @@
 
 - name: linetools
 
+- name: einsteinpy
+
+- name: feets
+
+- name: ligo.skymap
+
+- name: marxs
+
+- name: statmorph
+
+
 ################################################################
 # Infrastructure packages                                      #
 ################################################################
