@@ -123,6 +123,7 @@
 
 - name: statmorph
 
+- name: agnpy
 
 ################################################################
 # Infrastructure packages                                      #
