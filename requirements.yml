@@ -187,3 +187,5 @@
 # test dependency for astropy
 - name: jplephem
 
+# Now required for all required packages (as of October 2020)
+- name: python_abi
