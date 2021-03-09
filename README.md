@@ -12,7 +12,7 @@ conda config --add channels astropy
 
 # For maintainers/contributors
 
-[![Build Status](https://travis-ci.org/astropy/conda-channel-astropy.svg?branch=master)](https://travis-ci.org/astropy/conda-channel-astropy)
+[![Build Status](https://travis-ci.org/astropy/conda-channel-astropy.svg?branch=main)](https://travis-ci.org/astropy/conda-channel-astropy)
 
 ## Dependencies
 
@@ -20,7 +20,7 @@ This packages uses the file `sync.py` from https://github.com/glue-viz/conda-syn
 
 ## Updating an existing package to a new version
 
-Update the package on conda-forge. Once a day a cron job is run to copy packages over to this channel. If an immediate copy is needed, push an empty commit to master.
+Update the package on conda-forge. Once a day a cron job is run to copy packages over to this channel. If an immediate copy is needed, push an empty commit to main.
 
 ## Adding a new package
 
