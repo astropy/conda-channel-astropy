@@ -1,6 +1,6 @@
 # Important Notice
 
-The astropy conda channel is no longer active. Please pull Astropy Project packages from
+The *astropy conda channel* is no longer active. Please pull Astropy Project packages from
 `conda-forge` channel instead if you must use `conda` but we recommend `pip` where possible.
 
 # For users
